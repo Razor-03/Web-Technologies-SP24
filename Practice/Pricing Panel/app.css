@@ -17,6 +17,7 @@ body {
     text-transform: uppercase;
     padding: 15px 25px;
     padding-bottom: 4em;
+    letter-spacing: 1px;
 }
 
 .pricing-plan {
@@ -63,18 +64,19 @@ body {
 .pricing-btn {
     border: rgba(172, 103, 39, 0.555) 1px solid;
     border-radius: 0.5em;
+    display: inline-block;
     font-size: 1em;
     padding: 0.9em 1.8em;
     background-color: #fff;
     color: rgb(172, 103, 39);
     text-transform: uppercase;
+    transition: transform 0.25s, background-color 200ms ease-in-out;
 }
 
-.pricing-btn:hover,
-.pricing-btn.is-featured:focus {
+.pricing-btn:hover {
     background-color: rgba(172, 103, 39, 0.2);
     color: rgb(172, 103, 39);
-    transition: background-color 200ms ease-in-out;
+    transform: translateY(2px);
 }
 
 .pricing-btn.is-featured {
@@ -86,6 +88,5 @@ body {
 .pricing-btn.is-featured:focus {
     background-color: rgb(131, 79, 30);
     color: #fff;
-    transition: background-color 200ms ease-in-out;
 }
 
