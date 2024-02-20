@@ -8,17 +8,13 @@ h1 {
     background-color: rgb(10, 10, 39);
     display: flex;
     margin: 0 auto;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
 }
 
 #container div {
     width: 400px;
     height: 150px;
-}
-
-.some {
-    align-self: center;
 }
