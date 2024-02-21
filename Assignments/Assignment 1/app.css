@@ -14,9 +14,9 @@
 }
 
 .main-content {
-    width: 90%;
     justify-content: center;
     margin: 0 auto;
+    /* min-width: 380px; */
 }
 
 .title {
@@ -42,21 +42,62 @@
 
 .links {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
     font-size: 0.7em;
 }
 
 .education {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
+    text-align: center;
+}
+
+.edu-info {
+    color: #000;
+    font-size: 0.8em;
+}
+
+.edu-title {
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.edu-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.in-line {
+    display: inline;
+}
+
+.cgpa {
+    padding-left: 2.2em;
 }
 
 .headings {
-    color: #64bfaa;
     font-weight: 500;
+    font-size: 1.2em;
     text-transform: uppercase;
-    text-decoration: underline; 
+    text-decoration: underline;
+    padding: 1em 0 0 0.7em;
+    text-align: center;
+}
+
+.skill-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    height: 4em;
+}
+
+.skills {
+    font-size: 0.75em;
+    /* padding: 0.5em 0; */
+    background-color:#1d212a;
+    border-radius: 0.3em;
+    padding: 0.4em;
+    color: #e4e4e4;
 }
 
 .padding-m {
@@ -69,4 +110,20 @@
 
 .margin-btm-m {
     margin-bottom: 0.7em;
+}
+
+.left-pad {
+    padding-left: 0.7em;
+}
+
+.padding-v-sm {
+    padding: 0.2em 0;
+}
+
+.color-accent {
+    color: #3ca8a7;;
+}
+
+.text-center{
+    text-align: center;
 }
