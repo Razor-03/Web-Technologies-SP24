@@ -177,7 +177,6 @@
     .details {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         /* flex-wrap: wrap; */
     }
 
@@ -205,5 +204,23 @@
 
     .flex-2 {
         flex-basis: 100%;
+    }
+
+    .langs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .lang-title {
+        text-align: left;
+    }
+
+    .lang-info {
+        text-align: left;
+    }
+
+    .per-lang {
+        flex-basis: 260px;
     }
 }
