@@ -115,7 +115,7 @@
     justify-content: space-evenly;
     align-content: space-evenly;
     flex-wrap: wrap;
-    min-height: 6em;
+    min-height: 5.5em;
 }
 
 .skills {
