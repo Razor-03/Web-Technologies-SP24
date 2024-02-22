@@ -16,6 +16,7 @@
 .main-content {
     justify-content: center;
     margin: 0 auto;
+    background-color: #f0f0f0;
     /* min-width: 380px; */
 }
 
