@@ -53,12 +53,31 @@
 
 .edu-info {
     color: #000;
-    font-size: 0.8em;
+    font-size: 1rem;
 }
 
 .edu-title {
     font-weight: 700;
     font-size: 0.9em;
+}
+
+.langs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lang-title{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+.lang-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 .edu-details {
