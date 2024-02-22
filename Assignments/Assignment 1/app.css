@@ -172,7 +172,8 @@
     .details {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
     }
 
     .links li {
@@ -183,5 +184,21 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .headings {
+        text-align: left;
+    }
+
+    .education {
+        text-align: left;
+    }
+
+    .projects {
+        flex-basis: 100%
+    }
+
+    .education-div {
+        flex-basis: 100%;
     }
 }
