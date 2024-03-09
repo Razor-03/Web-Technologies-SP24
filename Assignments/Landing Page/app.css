@@ -1,0 +1,9 @@
+body{
+    background-color: #1a1a1a;
+}
+
+.header {
+    background-image: url("images/budapest.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
