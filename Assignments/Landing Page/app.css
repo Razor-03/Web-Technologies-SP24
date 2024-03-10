@@ -1,9 +1,12 @@
 body{
     background-color: #1a1a1a;
+    color: white;
 }
 
 .header {
     background-image: url("images/budapest.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
 }
