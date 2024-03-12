@@ -21,6 +21,11 @@ header{
     color: #fff;
 }
 
+.scrolled {
+    background-color: #1a1a1a;
+    /* transition: background-color 0.5s; */
+}
+
 @media (max-width: 1200px) {
     .intro-heading {
         font-size: 3.5rem;
