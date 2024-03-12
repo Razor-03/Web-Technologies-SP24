@@ -1,0 +1,28 @@
+body{
+    /* background-color: #1a1a1a; */
+    color: white;
+}
+
+.header {
+    background-image: url("images/budapest.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    /* background-attachment: fixed; */
+}
+
+.blank {
+    min-height: 500px;
+}
+
+.intro-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .intro-heading {
+        font-size: 3.5rem;
+    }
+}
