@@ -24,18 +24,20 @@
         id="mainNav"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">ENVISION ESTATE</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="col-2">
+            <a class="navbar-brand" href="#">ENVISION ESTATE</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -66,12 +68,17 @@
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                   </svg>
                 </button> -->
-                <input
-                  type="text"
-                  class="form-control p-md-3 rounded-pill"
-                  id="formGroupExampleInput"
-                  placeholder="New York, NY"
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control p-md-3 rounded-pill"
+                    id="formGroupExampleInput"
+                    placeholder="New York, NY"
+                  />
+                  <!-- <span class="input-group-text" id="basic-addon2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span> -->
+                </div>
               </div>
             </div>
           </div>
@@ -188,7 +195,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/f4821b883d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f4821b883d.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(function () {
         $(document).scroll(function () {
