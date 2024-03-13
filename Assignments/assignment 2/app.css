@@ -4,7 +4,8 @@ header{
 }
 
 .header {
-    background-image: url("images/budapest.jpg");
+    /* background-image: url("images/budapest.jpg"); */
+    background-image: url("https://static.rdc.moveaws.com/images/hero/default/2021-11/jpg/hp-hero-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -23,7 +24,7 @@ header{
 
 .scrolled {
     background-color: #1a1a1a;
-    /* transition: background-color 0.5s; */
+    transition: background-color 0.5s;
 }
 
 @media (max-width: 1200px) {
