@@ -45,23 +45,31 @@ header{
     border-bottom: 1px solid #f8f9fa;
 }
 
-.signup-btn {
-    background-color: #212529 !important;
-    border-radius: 1em;
-}
+
 
 @media (min-width: 576px) {
     .btn-position{
         transform: translate(-4em, 0.6em);
     }
 
-    .login-btn {
+    /* .login-btn {
         float: right;
+    } */
+}
+
+@media (min-width: 1000px) {
+    .signup-btn {
+        background-color: #212529 !important;
+        border-radius: 1em;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .intro-heading {
         font-size: 3.5rem;
+    }
+
+    .nav-color {
+        background-color: #212529;
     }
 }
