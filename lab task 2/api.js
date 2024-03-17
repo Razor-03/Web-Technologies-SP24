@@ -21,8 +21,8 @@ function displayListings(listings) {
 
         cardBody.append('<h5 class="card-title">' + listing.title + '</h5>');
         cardBody.append('<p class="card-text">Content: ' + listing.content + '</p>');
-        cardBody.append('<p class="card-text">Location: ' + listing.location + '</p>');
-        cardBody.append('<p class="card-text">Description: ' + listing.description + '</p>');
+        // cardBody.append('<p class="card-text">Location: ' + listing.location + '</p>');
+        // cardBody.append('<p class="card-text">Description: ' + listing.description + '</p>');
 
         card.append(cardBody);
         listingContainer.append(card);
