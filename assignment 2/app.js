@@ -1,52 +1,81 @@
+var formValid = {
+    firstName: false,
+    lastName: false,
+    email: false,
+    query: false
+}
+
+function checkValidations() {
+    if (formValid.firstName && formValid.lastName && formValid.email && formValid.query) {
+        $('#submit-button').removeAttr('disabled');
+    } else {
+        $('#submit-button').attr('disabled', true);
+    }
+}
+
+function errorMsg (element, message) {
+    $(element).text(message).addClass('d-block').removeClass('d-none');
+}
+
+function hideMsg (element) {
+    $(element).addClass('d-none').removeClass('d-block');
+}
+
 $('#first-name').on('input', function() {
     var email = $(this).val();
     if(email.length < 1){
-        $('#fn-validator').text('This field is required.').addClass('d-block').removeClass('d-none');
+        errorMsg('#fn-validator', 'This field is required.');
+        formValid.firstName = false;
+        checkValidations();
     }
     else{
-        $('#fn-validator').addClass('d-none').removeClass('d-block');
+        hideMsg('#fn-validator');
+        formValid.firstName = true;
+        checkValidations();
     }
 });
 
 $('#last-name').on('input', function() {
     var email = $(this).val();
     if(email.length < 1){
-        $('#ln-validator').text('This field is required.').addClass('d-block').removeClass('d-none');
+        errorMsg('#ln-validator', 'This field is required.');
+        formValid.lastName = false;
+        checkValidations();
     }
     else{
-        $('#ln-validator').addClass('d-none').removeClass('d-block');
+        hideMsg('#ln-validator');
+        formValid.lastName = true;
+        checkValidations();
     }
 });
 
 $('#email').on('input', function() {
     var email = $(this).val();
     if(email.length < 1){
-        $('#email-validator').text('This field is required.').addClass('d-block').removeClass('d-none');
+        errorMsg('#email-validator', 'This field is required.');
+        formValid.email = false;
+        checkValidations();
     }
     else{
-        $('#email-validator').addClass('d-none').removeClass('d-block');
+        hideMsg('#email-validator');
         var testExp = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-        testExp.test(email) ? $('#email-validator').addClass('d-none').removeClass('d-block') : $('#email-validator').text('Invalid E-mail').addClass('d-block').removeClass('d-none');
-    }
-});
-
-$('#last-name').on('input', function() {
-    var email = $(this).val();
-    if(email.length < 1){
-        $('#ln-validator').text('This field is required.').addClass('d-block').removeClass('d-none');
-    }
-    else{
-        $('#ln-validator').addClass('d-none').removeClass('d-block');
+        testExp.test(email) ? hideMsg('#email-validator') : errorMsg('#email-validator', 'Email is not valid.');
+        formValid.email = testExp.test(email);
+        checkValidations();
     }
 });
 
 $('#query').on('input', function() {
     var email = $(this).val();
     if(email.length < 1){
-        $('#q-validator').text('This field is required.').addClass('d-block').removeClass('d-none');
+        errorMsg('#q-validator', 'This field is required.');
+        formValid.query = false;
+        checkValidations();
     }
     else{
-        $('#q-validator').addClass('d-none').removeClass('d-block');
+        hideMsg('#q-validator');
+        formValid.query = true;
+        checkValidations();
     }
 });
 
