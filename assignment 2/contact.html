@@ -79,28 +79,28 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-12 border p-md-5 p-3 rounded">
-                            <form action="/#">
+                            <form action="/">
                               <div class="text-center fs-3 mb-4 d-md-none">Contact Us</div>
                               <div class="row mb-3">
                                 <div class="col">
                                   <label for="first-name" class="form-label">First name</label>
-                                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="first-name">
+                                  <input autocomplete="off" type="text" class="form-control" placeholder="First name" aria-label="First name" id="first-name" name="fname">
                                   <div id="fn-validator" class="form-text text-danger d-none"></div>
                                 </div>
                                 <div class="col">
                                   <label for="last-name" class="form-label">Last Name</label>
-                                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last-name">
+                                  <input autocomplete="off" type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last-name" name="lname">
                                   <div id="ln-validator" class="form-text text-danger d-none"></div>
                                 </div>
                               </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@xyz.com">
+                                    <input autocomplete="off" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@xyz.com" name="email">
                                     <div id="email-validator" class="form-text text-danger d-none"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="query" class="form-label">What would you like to discuss?</label>
-                                    <input type="text" class="form-control" id="query" placeholder="Your query here">
+                                    <input autocomplete="off" type="text" class="form-control" id="query" placeholder="Your query here" name="query">
                                     <div id="q-validator" class="form-text text-danger d-none"></div>
                                 </div>
                                 <button type="submit" class="btn btn-dark" disabled id="submit-button">Submit</button>
