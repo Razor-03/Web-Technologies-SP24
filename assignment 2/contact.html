@@ -60,7 +60,7 @@
         <div class="row align-items-center justify-content-center my-5">
           <div class="col-7 mt-5">
             <h1 class="display-2 fw-bold text-center head-font my-5">
-              Contact Us
+              We Are Here For You
             </h1>
           </div>
         </div>
@@ -72,25 +72,33 @@
             <div class="">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 text-center py-5">
+                        <div class="col-6 text-center py-5 d-none d-md-block">
                             <div class="p-5 bg-dark rounded">
-                               <p class="text-white">Write to us about any type of query</p>
+                                <h2 class="text-white">Contact Us<h2>
+                                <p class="text-white fs-5 lead">Our team is here to answer your queries</p>
                             </div>
                         </div>
-                        <div class="col-6 border p-5 rounded">
+                        <div class="col-md-6 col-12 border p-md-5 p-3 rounded">
                             <form action="/#">
+                              <div class="text-center fs-3 mb-4 d-md-none">Contact Us</div>
+                              <div class="row mb-3">
+                                <div class="col">
+                                  <label for="first-name" class="form-label">First name</label>
+                                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="first-name">
+                                </div>
+                                <div class="col">
+                                  <label for="last-name" class="form-label">Last Name</label>
+                                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last-name">
+                                </div>
+                              </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@xyz.com">
                                     <div id="email" class="form-text">We'll never share your email with anyone else.</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="pwd" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="pwd">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="query" class="form-label">Query</label>
-                                    <input type="text" class="form-control" id="query">
+                                    <label for="query" class="form-label">What would you like to discuss?</label>
+                                    <input type="text" class="form-control" id="query" placeholder="Your query here">
                                 </div>
                                 <button type="submit" class="btn btn-dark">Submit</button>
                               </form>
@@ -114,13 +122,9 @@
       src="https://kit.fontawesome.com/f4821b883d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
     <script>
-      $(function () {
-        $(document).scroll(function () {
-          var $nav = $("#mainNav");
-          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-        });
-      });
+      
     </script>
   </body>
 </html>
