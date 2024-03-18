@@ -52,4 +52,19 @@ $(document).ready(function () {
             }
         });
     }
+
+    function addStory(data) {
+        $.ajax({
+            url: 'https://usmanlive.com/wp-json/api/stories',
+            type: 'POST',
+            data: data,
+            success: function () {
+                fetchStories(); // Reload stories after addition
+                $('#addStoryForm')[0].reset(); // Reset form
+            },
+            error: function (error) {
+                console.error('Error adding story:', error);
+            }
+        });
+    }
 });
