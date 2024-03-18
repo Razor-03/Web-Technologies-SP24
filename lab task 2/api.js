@@ -40,18 +40,6 @@ $(document).ready(function () {
             listingContainer.append(card);
         });
     }
-    function deleteStory(id) {
-        $.ajax({
-            url: 'https://usmanlive.com/wp-json/api/stories/' + id,
-            type: 'DELETE',
-            success: function () {
-                fetchStories(); // Reload stories after deletion
-            },
-            error: function (error) {
-                console.error('Error deleting story:', error);
-            }
-        });
-    }
 
     function addStory(data) {
         $.ajax({
@@ -59,11 +47,24 @@ $(document).ready(function () {
             type: 'POST',
             data: data,
             success: function () {
-                fetchStories(); // Reload stories after addition
-                $('#addStoryForm')[0].reset(); // Reset form
+                fetchStories();
+                $('#addStoryForm')[0].reset();
             },
             error: function (error) {
                 console.error('Error adding story:', error);
+            }
+        });
+    }
+
+    function deleteStory(id) {
+        $.ajax({
+            url: 'https://usmanlive.com/wp-json/api/stories/' + id,
+            type: 'DELETE',
+            success: function () {
+                fetchStories(); 
+            },
+            error: function (error) {
+                console.error('Error deleting story:', error);
             }
         });
     }
