@@ -25,7 +25,7 @@ app.get('/search', (req, res) => {
     if(!q) {
         res.send("Nothing found if nothing searched");
     } else {
-        res.send(`<h1>Search results for: ${q}:${sound}</h1>`);
+        res.send(`<h1>Search results for: ${q}: ${sound}</h1>`);
     }
 })
 
