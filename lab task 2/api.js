@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $(document).scroll(function () {
+        var $nav = $("#mainNav");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+      
     fetchStories();
 
     $('#addStoryForm').submit(function (event) {
