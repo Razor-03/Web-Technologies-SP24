@@ -30,11 +30,20 @@ $(document).ready(function () {
             cardBody.append('<h5 class="card-title">' + story.title + '</h5>');
             cardBody.append('<p class="card-text">Content: ' + story.content + '</p>');
 
+            const updateBtn = $('<button class="btn btn-primary mr-2">Update</button>');
+            updateBtn.click(function () {
+                const newContent = prompt("Enter new content for the story:", story.content);
+                if (newContent !== null) {
+                    updateStory(story.id, story.title, newContent);
+                }
+            });
+
             const deleteBtn = $('<button class="btn btn-danger">Delete</button>');
             deleteBtn.click(function () {
                 deleteStory(story.id);
             });
 
+            cardBody.append(updateBtn);
             cardBody.append(deleteBtn);
             card.append(cardBody);
             listingContainer.append(card);
@@ -61,10 +70,24 @@ $(document).ready(function () {
             url: 'https://usmanlive.com/wp-json/api/stories/' + id,
             type: 'DELETE',
             success: function () {
-                fetchStories(); 
+                fetchStories();
             },
             error: function (error) {
                 console.error('Error deleting story:', error);
+            }
+        });
+    }
+
+    function updateStory(id, title, newContent) {
+        $.ajax({
+            url: 'https://usmanlive.com/wp-json/api/stories/' + id,
+            type: 'PUT',
+            data: { title: title, content: newContent },
+            success: function () {
+                fetchStories();
+            },
+            error: function (error) {
+                console.error('Error updating story:', error);
             }
         });
     }
