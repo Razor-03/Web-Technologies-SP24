@@ -20,12 +20,12 @@ app.get(`/r/:subreddit/:postId`, (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-    const { q } = req.query;
+    const { q, sound } = req.query;
     console.log(req.query);
     if(!q) {
         res.send("Nothing found if nothing searched");
     } else {
-        res.send(`<h1>Search results for: ${q}</h1>`);
+        res.send(`<h1>Search results for: ${q}:${sound}</h1>`);
     }
 })
 
