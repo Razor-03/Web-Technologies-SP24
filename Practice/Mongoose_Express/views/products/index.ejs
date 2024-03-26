@@ -10,8 +10,7 @@
     <ul>
       <% products.forEach(p => { %>
       <li>
-        <%= p.name %> - <%= p.price %>
-        <a href="/products/<%= p._id %>">details</a>
+        <a href="/products/<%= p._id %>"><%= p.name %></a>
       </li>
       <% }); %>
     </ul>
