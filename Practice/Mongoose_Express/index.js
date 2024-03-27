@@ -33,7 +33,7 @@ app.get('/products', async (req, res) => {
     // res.send(products);
 });
 
-const categories = ['fruit', 'vegetable', 'dairy', 'crafting component'];
+const categories = ['fruit', 'vegetable', 'dairy', 'crafting component', 'alchemy'];
 app.get('/products/new', (req, res) => {
     res.render('products/new', { categories });
 });
