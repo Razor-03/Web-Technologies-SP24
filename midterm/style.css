@@ -1,0 +1,19 @@
+.bg-grey {
+    background-color: rgb(233, 233, 233);
+}
+
+.fs-10 {
+    font-size: 0.8em;
+}
+
+.border-bottom-10 {
+    border-bottom:7px solid #adadad81;
+}
+
+.first-item {
+    padding: 1em;
+}
+
+.bg-image {
+    background-image: url('https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/OGvnDo_CWVzU48aY6uI0zG7Gtks=/1660x0/smart/filters:no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/DZFMV3YRCRAZDA4BJF73UXBE5U.jpg');
+}
