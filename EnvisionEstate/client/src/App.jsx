@@ -1,7 +1,8 @@
+import Navbar from "./components/Navbar";
 export default function App() {
   return (
-    <div className="max-w-[640px] h-screen mx-auto bg-black px-[20px] lg:max-w-[768px] xl:max-w-[1280px]">
-      Hello
+    <div className="max-w-[90%] h-screen mx-auto px-[20px] text-[#0d1321]">
+      <Navbar/>
     </div>
   );
 }
