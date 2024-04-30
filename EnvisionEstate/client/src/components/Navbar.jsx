@@ -22,7 +22,7 @@ export default function Navbar() {
             </div>
             <div className="basis-2/5 flex bg-[#f0ebd8] justify-end items-center gap-x-2 sm:gap-x-10 h-full ">
                 <a href="" className="hidden md:inline">Log In</a>
-                <a href="" className="bg-[#3e5c76] text-[#f0ebd8] py-1 px-3 rounded-md">Sign Up</a>
+                <a href="" className="bg-[#1d2d44] text-[#f0ebd8] py-1 px-3 rounded-md">Sign Up</a>
                 <div className="z-10" onClick={toggleMenu}>
                     <FaBars className={`md:hidden ${menuDisplay ? "text-white" : "text-black"}`} />
                 </div>
