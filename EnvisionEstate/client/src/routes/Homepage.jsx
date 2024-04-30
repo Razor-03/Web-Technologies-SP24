@@ -2,15 +2,17 @@ import Searchbar from "../components/Searchbar";
 
 export default function Homepage() {
     return (
-        <main className="flex flex-col md:flex-row h-full bg-[#fff00f]">
+        <main className="flex flex-col md:flex-row h-full ">
             <div className="basis-3/5">
-                <div className="pr-24 flex flex-col justify-center gap-y-12 h-full">
-                    <h1 className="text-6xl font-semibold">Discover Your Dream Home</h1>
+                <div className="lg:pr-24 flex flex-col justify-center gap-y-12 h-full">
+                    <h1 className="text-5xl md:text-6xl font-semibold">Discover Your Dream Home</h1>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sapiente tempora modi dolore nisi laudantium cupiditate non deserunt quis consequatur! Dolore consectetur cumque fugiat soluta sunt fuga nulla dicta eaque.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sapiente tempora
+                        modi dolore nisi laudantium cupiditate non deserunt quis consequatur! 
+                        Dolore consectetur cumque fugiat soluta sunt fuga nulla dicta eaque.
                     </p>
                     <Searchbar />
-                    <div className="flex justify-between">
+                    <div className="hidden md:flex justify-between">
                         <div className="">
                             <h1 className="text-3xl font-semibold">16+</h1>
                             <h2 className="text-xl font-light">Years of Experience</h2>
