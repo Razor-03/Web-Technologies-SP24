@@ -1,5 +1,5 @@
 export default function Listpage(){
     return (
-        <div></div>
+        <div>Listpage</div>
     )
 }
