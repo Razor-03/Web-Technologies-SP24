@@ -2,7 +2,7 @@ import Searchbar from "../components/Searchbar";
 
 export default function Homepage() {
     return (
-        <main className="flex flex-col md:flex-row h-full ">
+        <main className="flex flex-col md:flex-row h-full">
             <div className="basis-3/5">
                 <div className="lg:pr-24 flex flex-col justify-center gap-y-12 h-full">
                     <h1 className="text-5xl md:text-6xl font-semibold">Discover Your Dream Home</h1>

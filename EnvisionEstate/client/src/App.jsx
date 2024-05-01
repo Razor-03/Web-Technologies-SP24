@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Homepage from "./routes/Homepage";
 import {
   createBrowserRouter,
