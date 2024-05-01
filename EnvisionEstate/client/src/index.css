@@ -8,10 +8,14 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a{
   text-decoration: none;
   color: inherit;
-  transition: all 0.4s ease;
+  transition: all 100ms ease-in-out;
 }
 
 a:hover {
