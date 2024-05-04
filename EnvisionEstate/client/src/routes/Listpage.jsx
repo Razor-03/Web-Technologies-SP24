@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import Filter from "../components/Filter";
-import { listData } from "../lib/dummyData"
+import { listData } from "../lib/dummyData";
+import Map from "../components/Map";
 
 export default function Listpage() {
     const data = listData;
@@ -14,7 +15,9 @@ export default function Listpage() {
                     })}
                 </div>
             </div>
-            <div className="basis-1/2 lg:basis-2/5 lg:bg-[#f0ebd8]">2</div>
+            <div className="basis-1/2 lg:basis-2/5 lg:bg-[#f0ebd8]">
+                <Map position={[34.0549, 34.0549]}/>
+            </div>
         </div>
     )
 }

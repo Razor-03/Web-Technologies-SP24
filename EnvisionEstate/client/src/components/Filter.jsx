@@ -89,7 +89,7 @@ export default function Filter() {
                         placeholder="any"
                     />
                 </div>
-                <button className="p-1 flex justify-center items-center text-3xl rounded-sm text-[#f0ebd8] bg-[#1d2d44] w-28">
+                <button className="p-1 flex justify-center items-center text-3xl rounded-md text-[#f0ebd8] bg-[#1d2d44] w-28">
                     <BsSearch />
                 </button>
             </div>
