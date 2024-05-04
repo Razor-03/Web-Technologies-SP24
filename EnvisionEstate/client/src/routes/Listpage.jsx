@@ -16,7 +16,7 @@ export default function Listpage() {
                 </div>
             </div>
             <div className="basis-1/2 lg:basis-2/5 lg:bg-[#f0ebd8]">
-                <Map position={[34.0549, 34.0549]}/>
+                <Map items={data}/>
             </div>
         </div>
     )
