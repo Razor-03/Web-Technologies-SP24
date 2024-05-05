@@ -19,15 +19,15 @@ export default function Slider({ images }) {
         }
     }
     return (
-        <div className="slider flex w-full h-content gap-10 max-h-80">
+        <div className="slider flex w-full h-content gap-1 max-h-80 lg:gap-10">
             {
                 imageIndex !== null && (
-                    <div className="fullSlider flex justify-between items-center absolute w-screen h-screen top-0 left-0 bg-[#000]">
+                    <div className="fullSlider z-50 flex justify-between items-center absolute w-screen h-screen top-0 left-0 bg-[#000]">
                         <div className="arrow basis-1/12 flex justify-center hover:cursor-pointer ">
                             <IoIosArrowDropleft className="text-white" size={25} onClick={() => changeImage('left')} />
                         </div>
                         <div className="imgContainer basis-10/12 w-full h-full">
-                            <img src={images[imageIndex]} alt="" className="w-full h-full object-cover" />
+                            <img src={images[imageIndex]} alt="" className="w-full h-full object-contain lg:object-cover" />
                         </div>
                         <div className="arrow basis-1/12 flex justify-center hover:cursor-pointer">
                             <IoIosArrowDropright className="text-white" size={25} onClick={() => changeImage('right')}/>
@@ -41,10 +41,10 @@ export default function Slider({ images }) {
             <div className="bigImage basis-3/4">
                 <img src={images[0]} alt="slider-image" className="h-full w-full object-cover rounded-md" onClick={() => setImageIndex(0)} />
             </div>
-            <div className="smallImages basis-1/4 flex flex-col gap-4">
+            <div className="smallImages basis-1/4 flex flex-col gap-1 sm:gap-4">
                 {
                     images.slice(1).map((image, index) => (
-                        <img key={index} src={image} alt="slider-image" className="max-h-24 object-cover w-full rounded-md" onClick={() => setImageIndex(index+1)} />
+                        <img key={index} src={image} alt="slider-image" className="h-16 sm:h-24 object-cover w-full rounded-md" onClick={() => setImageIndex(index+1)} />
                     ))
                 }
             </div>

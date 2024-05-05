@@ -1,7 +1,7 @@
 import { LuMapPin } from "react-icons/lu";
 import { userData } from "../lib/dummyData";
 
-export default function ListingInfo ({post}) {
+export default function PropertyInfo({ post }) {
     return (
         <div className="info mt-10">
             <div className="top flex justify-between">
@@ -22,6 +22,7 @@ export default function ListingInfo ({post}) {
             </div>
             <div className="bottom text-[#555] mt-10 leading-relaxed">
                 {post.description}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?
             </div>
         </div>
     );

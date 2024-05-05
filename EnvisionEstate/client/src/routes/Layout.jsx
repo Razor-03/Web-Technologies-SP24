@@ -7,7 +7,7 @@ export default function Layout() {
             <div className="">
                 <Navbar />
             </div>
-            <div className="h-full overflow-hidden">
+            <div className="h-screen">
                 <Outlet />
             </div>
         </div>
