@@ -6,6 +6,7 @@ import {
 import Listpage from "./routes/Listpage";
 import Layout from "./routes/Layout";
 import Singlepage from "./routes/Singlepage";
+import ProfilePage from "./routes/ProfilePage";
 
 export default function App() {
 
@@ -25,6 +26,10 @@ export default function App() {
         {
           path: '/:id',
           element: <Singlepage/>
+        },
+        {
+          path: '/profile',
+          element: <ProfilePage/>
         }
       ]
     },
