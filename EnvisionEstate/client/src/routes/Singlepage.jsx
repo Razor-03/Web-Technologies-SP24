@@ -6,9 +6,12 @@ export default function Singlepage() {
     return (
         <div className="flex h-full">
             <div className="basis-3/5 details">
-                <div className="lg:pr-24 flex flex-col justify-center gap-y-12 h-full">
-                    <Slider images={singlePostData.images}/>
-                    <ListingInfo post={singlePostData}/>
+                <div className="lg:pr-24 flex flex-row justify-center gap-y-12 h-full">
+                    <div className="basis-11/12">
+                        <Slider images={singlePostData.images} />
+                        <ListingInfo post={singlePostData} />
+                    </div>
+                    {/* <div className="basis-1/5"></div> */}
                 </div>
             </div>
             <div className="basis-2/5 bg-[#f0ebd8] features">

@@ -3,7 +3,7 @@ import { userData } from "../lib/dummyData";
 
 export default function ListingInfo ({post}) {
     return (
-        <div className="info">
+        <div className="info mt-10">
             <div className="top flex justify-between">
                 <div className="post flex flex-col gap-2">
                     <h1 className="text-4xl font-semibold">{post.title}</h1>
