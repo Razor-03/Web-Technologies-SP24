@@ -45,9 +45,9 @@ export default function Navbar() {
                         </>
                     )
                 }
-                <div className={`bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 ${menuDisplay ? "left-0" : "left-[-50%]"}`}>
+                <div onClick={() => setMenuDisplay(false)} className={`bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 ${menuDisplay ? "left-0" : "left-[-50%]"}`}>
                     <Link to={""} className="">Home</Link>
-                    <Link to={""} className="">Browse</Link>
+                    <Link to={"/list"} className="">Browse</Link>
                     <Link to={""} className="">About</Link>
                     <Link to={""} className="">Contact Us</Link>
                     <Link to={""} className="">Login</Link>
