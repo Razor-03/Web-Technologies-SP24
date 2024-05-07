@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 
+const postRoutes = require('./routes/post');
+
+app.use('/route', postRoutes);
+
 app.get('/', (req, res) => {
-    console.log('Running');
+    res.send('Running');
 })
 
 app.listen(3000, (req, res) => {
