@@ -12,10 +12,13 @@ export default function Navbar() {
 
     return (
         <nav className="text-base sm:text-base h-20 flex justify-between items-center">
-            <div className="basis-3/5 flex gap-x-4 xl:gap-x-10 items-center h-full">
+            <div className="basis-3/5 flex gap-x-4 xl:gap-x-10 justify-between md:justify-start items-center h-full">
+                <div className="z-10" onClick={toggleMenu}>
+                    <FaBars className={`md:hidden ${menuDisplay ? "text-white" : "text-black"}`} />
+                </div>
                 <Link to={"/"} className="flex items-center">
                     <img src="eLogo.png" alt="E" className="inline w-14" />
-                    <span className="font-bold text-base sm:text-lg inline md:hidden lg:inline">EnvisionEstate</span>
+                    <span className="font-bold text-lg inline md:hidden lg:inline">EnvisionEstate</span>
                 </Link>
                 <Link to={"/"} className="hidden md:inline">Home</Link>
                 <Link to={"/list"} className="hidden md:inline">Browse</Link>
@@ -34,21 +37,15 @@ export default function Navbar() {
                                 <div className="absolute bg-[#f00] text-white rounded-full w-6 h-5 flex justify-center items-center bottom-7 left-16">3</div>
                                 Profile
                             </Link>
-                            <div className="z-10" onClick={toggleMenu}>
-                                <FaBars className={`md:hidden ${menuDisplay ? "text-white" : "text-black"}`} />
-                            </div>
                         </>
                     ) : (
                         <>
                             <Link to={""} className="hidden md:inline">Log In</Link>
                             <Link to={""} className="bg-[#1d2d44] text-[#f0ebd8] py-1 px-3 rounded-md">Sign Up</Link>
-                            <div className="z-10" onClick={toggleMenu}>
-                                <FaBars className={`md:hidden ${menuDisplay ? "text-white" : "text-black"}`} />
-                            </div>
                         </>
                     )
                 }
-                <div className={`bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 ${menuDisplay ? "right-0" : "right-[-50%]"}`}>
+                <div className={`bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 ${menuDisplay ? "left-0" : "left-[-50%]"}`}>
                     <Link to={""} className="">Home</Link>
                     <Link to={""} className="">Browse</Link>
                     <Link to={""} className="">About</Link>
