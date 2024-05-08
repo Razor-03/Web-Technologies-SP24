@@ -1,8 +1,8 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('post route here');
+    res.render('list/index');
 });
 
-export default router;
+module.exports = router;

@@ -1,5 +1,5 @@
-import express from "express";
-import { register, login, logout } from "../cotrollers/auth.controller.js";
+const express = require("express");
+const { register, login, logout } = require("../cotrollers/auth.controller.js");
 const router = express.Router({ mergeParams: true});
 
 router.use(express.json());
@@ -10,4 +10,4 @@ router.post('/login', login);
 
 router.post('/logout', logout);
 
-export default router;
+module.exports = router;

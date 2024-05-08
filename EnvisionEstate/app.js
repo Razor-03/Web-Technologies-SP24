@@ -1,12 +1,17 @@
-import express from "express"; 
+const express = require("express");
 const app = express();
+const path = require("path");
 
-import postRoutes from "./routes/posts.js";
-import authRoutes from "./routes/auth.js";
+const postRoutes = require("./routes/posts.js");
+const authRoutes = require("./routes/auth.js");
 
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use("/api/posts", postRoutes);
 app.use("/", authRoutes);
 
@@ -17,8 +22,6 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
     const {name, password } = req.body;
-    // res.send("Running");
-    // console.log("It works");
     console.log(name);
 });
 
