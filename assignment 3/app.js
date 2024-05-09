@@ -1,23 +1,25 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const ejsMate = require('ejs-mate');
 
-const postRoutes = require("./routes/posts.js");
-const authRoutes = require("./routes/auth.js");
+const postRoutes = require("./routes/posts");
+const authRoutes = require("./routes/auth");
 
-app.set("view engine", "ejs");
+app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
+app.set("view engine", "ejs");
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/api/posts", postRoutes);
+app.use("/posts", postRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Running");
-    console.log("It works");
+    res.render("home/index");
 });
 
 app.post("/", (req, res) => {
