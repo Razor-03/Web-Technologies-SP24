@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const { listData } = require("./seedHelper");
 const Property = require("../models/property");
 
+
 // console.log(listData);
 
 mongoose.connect('mongodb://localhost:27017/envision-estate');
