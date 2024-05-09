@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/posts", postRoutes);
+app.use("/list", postRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
