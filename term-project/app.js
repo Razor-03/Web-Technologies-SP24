@@ -29,7 +29,7 @@ app.use("/list", postRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("home/index");
 });
 
 app.post("/", (req, res) => {
