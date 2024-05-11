@@ -13,7 +13,7 @@ db.once("open", () => {
 });
 
 
-const postRoutes = require("./routes/posts");
+const propertyRoutes = require("./routes/properties");
 const authRoutes = require("./routes/auth");
 
 app.engine('ejs', ejsMate);
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/list", postRoutes);
+app.use("/properties", propertyRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {

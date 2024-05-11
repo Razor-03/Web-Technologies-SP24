@@ -13,7 +13,7 @@ db.once("open", () => {
 });
 
 
-const postRoutes = require("./routes/posts");
+const postRoutes = require("./routes/properties");
 const authRoutes = require("./routes/auth");
 
 app.engine('ejs', ejsMate);
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/list", postRoutes);
+app.use("/properties", postRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
@@ -37,6 +37,6 @@ app.post("/", (req, res) => {
     console.log(name);
 });
 
-app.listen(3000, (req, res) => {
+app.listen(5000, (req, res) => {
     console.log('Server running on port 3000');
 })
