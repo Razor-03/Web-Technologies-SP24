@@ -1,0 +1,39 @@
+<nav class="text-base sm:text-base h-20 flex justify-between items-center">
+    <div class="basis-3/5 flex gap-x-4 xl:gap-x-10 justify-between md:justify-start items-center h-full">
+        <div class="z-10" onClick=toggleMenu>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <a to="/" class="flex items-center">
+        <img src="images/eLogo.png" alt="E" class="inline w-14" />
+        <span class="font-bold text-lg inline md:hidden lg:inline">EnvisionEstate</span>
+        </a>
+        <a to="/" class="hidden md:inline">Home</a>
+        <a to="/list" class="hidden md:inline">Browse</a>
+        <a to="" class="hidden md:inline">About</a>
+        <a to="" class="hidden md:inline">Contact Us</a>
+    </div>
+    <div class="basis-2/5 flex lg:bg-[#f0ebd8] justify-end items-center gap-x-2 sm:gap-x-10 h-full ">
+        <div class="user flex gap-x-4 items-center font-semibold">
+            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="profile-pic" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
+            <span class="hidden md:inline">John Doe</span>
+        </div>
+        <a to="/profile"
+            class="py-2 px-4 cursor-pointer bg-[#1d2d44] text-[#f0ebd8] me-3 relative rounded-md hidden md:inline">
+        <div
+            class="absolute bg-[#f00] text-white rounded-full w-6 h-5 flex justify-center items-center bottom-7 left-16">
+            3</div>
+        Profile
+        </a>
+
+        <div
+            class='bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 left-[-50%]'>
+            <a to="" class="">Home</a>
+            <a to="/list" class="">Browse</a>
+            <a to="" class="">About</a>
+            <a to="" class="">Contact Us</a>
+            <a to="" class="">Login</a>
+            <a to="" class="">Sign Up</a>
+        </div>
+    </div>
+</nav>
