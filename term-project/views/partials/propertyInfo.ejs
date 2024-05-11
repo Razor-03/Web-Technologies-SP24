@@ -1,0 +1,22 @@
+<div class="info mt-10">
+    <div class="top flex justify-between">
+        <div class="post flex flex-col gap-2">
+            <h1 class="text-4xl font-semibold"><%= property.title %></h1>
+            <div class="address flex gap-1 items-center text-[#888]">
+                <LuMapPin />
+                <span><%= property.address %></span>
+            </div>
+            <div class="price text-lg font-light py-2 px-3 bg-[#ffe6a7] w-fit rounded-md">
+                $ <%= property.price %>
+            </div>
+        </div>
+        <div class="user flex px-12 flex-col items-center justify-center gap-4 bg-[#f0ebd8] rounded-md font-semibold">
+            <img src={userData.img} alt="" class="w-12 h-12 object-cover rounded-full" />
+            <span>userData.name</span>
+        </div>
+    </div>
+    <div class="bottom text-[#555] mt-10 leading-relaxed">
+        <%= property.description %>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?
+    </div>
+</div>

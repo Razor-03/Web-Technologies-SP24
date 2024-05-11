@@ -1,0 +1,79 @@
+<div class="flex flex-col gap-6">
+    <p class="font-semibold text-lg">General</p>
+    <div class="listVertical flex flex-col gap-4 bg-[#fff] p-4 rounded-md">
+        <div class="feature flex items-center gap-2">
+            <FaTools />
+            <div class="featureText text-sm">
+                <span class="font-semibold">Utilities</span>
+                <p>Renter is responsible</p>
+            </div>
+        </div>
+        <div class="feature flex items-center gap-2">
+            <MdOutlinePets />
+            <div class="featureTex text-sm">
+                <span class="font-semibold">Pet Policy</span>
+                <p>Pets Allowed</p>
+            </div>
+        </div>
+        <div class="feature flex items-center gap-2">
+            <FaDollarSign />
+            <div class="featureText text-sm">
+                <span class="font-semibold">Property Fees</span>
+                <p>Must have 3x the rent in total household income</p>
+            </div>
+        </div>
+    </div>
+    <p class="font-semibold text-lg">Sizes</p>
+    <div class="sizes flex justify-between gap-2">
+        <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
+            <TbRulerMeasure />
+            <span>80 sq ft</span>
+        </div>
+        <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
+            <FaBed />
+            <span>2 bedrooms</span>
+        </div>
+        <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
+            <FaBath />
+            <span>1 bathrooom</span>
+        </div>
+    </div>
+    <p class="font-semibold text-lg">Nearby Places</p>
+    <div class="listHorizontal flex justify-between gap-4 bg-[#fff] p-4 rounded-md">
+        <div class="feature flex items-center gap-2">
+            <FaTools />
+            <div class="featureText text-xs sm:text-sm">
+                <span class="font-semibold">School</span>
+                <p>250m away</p>
+            </div>
+        </div>
+        <div class="feature flex items-center gap-2">
+            <MdOutlinePets />
+            <div class="featureTex text-xs sm:text-sm">
+                <span class="font-semibold">Bus Stop</span>
+                <p>100m away</p>
+            </div>
+        </div>
+        <div class="feature flex items-center gap-2">
+            <FaDollarSign />
+            <div class="featureText text-xs sm:text-sm">
+                <span class="font-semibold">Restaurant</span>
+                <p>200m away</p>
+            </div>
+        </div>
+    </div>
+    <p class="font-semibold text-lg">Location</p>
+    <div class="mapContainer w-full min-h-48 z-10">
+        <Map items={[singlePostData]} />
+    </div>
+    <div class="buttons flex justify-between text-sm sm:text-base">
+        <button class="flex items-center p-4 bg-white rounded-md gap-2">
+            <BsChatLeftText />
+            Send a Message
+        </button>
+        <button class="flex items-center p-4 bg-white rounded-md gap-2">
+            <IoBookmarkOutline/>
+            Save
+        </button>
+    </div>
+</div>
