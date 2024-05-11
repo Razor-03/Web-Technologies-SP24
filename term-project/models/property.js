@@ -3,13 +3,18 @@ const Schema = mongoose.Schema;
 
 const propertySchema = Schema({
     title: String,
-    img: String,
+    images: [String],
     bedroom: Number,
     bathroom: Number,
     price: Number,
     address: String,
     latitude: Number,
     longitude: Number,
+    size: Number,
+    city: String,
+    school: String,
+    bus: String,
+    restaurant: String
 });
 
 module.exports = mongoose.model('Property', propertySchema);
