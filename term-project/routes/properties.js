@@ -34,4 +34,9 @@ router.put('/:id', async (req, res) => {
     res.redirect(`/properties/${req.params.id}`);
 });
 
+router.delete('/:id', async (req, res) => {
+    const property = await Property.findByIdAndDelete(req.params.id);
+    res.redirect(`/properties`);
+});
+
 module.exports = router;
