@@ -6,111 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="/public/stylesheets/formValidate.css">
 </head>
 
 <body>
-    <div
-        class="flex flex-col max-w-[100%] md:max-w-[90%] xl:max-w-[90%] h-screen mx-auto px-[20px] text-[#0d1321] oveflow-x-hidden">
-        <div class="">
-            <nav class="text-base sm:text-base h-20 flex justify-between items-center">
-                <div class="basis-3/5 flex gap-x-4 xl:gap-x-10 justify-between md:justify-start items-center h-full">
-                    <div class="z-10" onClick=toggleMenu>
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <a to="/" class="flex items-center">
-                        <img src="images/eLogo.png" alt="E" class="inline w-14" />
-                        <span class="font-bold text-lg inline md:hidden lg:inline">EnvisionEstate</span>
-                    </a>
-                    <a to="/" class="hidden md:inline">Home</a>
-                    <a to="/list" class="hidden md:inline">Browse</a>
-                    <a to="" class="hidden md:inline">About</a>
-                    <a to="" class="hidden md:inline">Contact Us</a>
-                </div>
-                <div class="basis-2/5 flex lg:bg-[#f0ebd8] justify-end items-center gap-x-2 sm:gap-x-10 h-full ">
-                    <div class="user flex gap-x-4 items-center font-semibold">
-                        <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            alt="profile-pic" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
-                        <span class="hidden md:inline">John Doe</span>
-                    </div>
-                    <a to="/profile"
-                        class="py-2 px-4 cursor-pointer bg-[#1d2d44] text-[#f0ebd8] me-3 relative rounded-md hidden md:inline">
-                        <div
-                            class="absolute bg-[#f00] text-white rounded-full w-6 h-5 flex justify-center items-center bottom-7 left-16">
-                            3</div>
-                        Profile
-                    </a>
+    <form action="/properties" method="post" id="form">
+        <div>
+            <div class="flex justify-around my-20">
+                <div class="border-b border-gray-900/10 pb-12 basis-4/5">
+                    <h2 class="text-lg font-semibold leading-7 text-gray-900">Add New Property</h2>
+                    <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                        <div class="sm:col-span-4">
+                            <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[title]" id="title" autocomplete="given-name" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                            </div>
+                        </div>
 
-                    <div
-                        class='bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 left-[-50%]'>
-                        <a to="" class="">Home</a>
-                        <a to="/list" class="">Browse</a>
-                        <a to="" class="">About</a>
-                        <a to="" class="">Contact Us</a>
-                        <a to="" class="">Login</a>
-                        <a to="" class="">Sign Up</a>
+                        <div class="sm:col-span-1">
+                            <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Price</label>
+                            <div class="mt-2">
+                                <input type="number" name="property[price]" id="price" autocomplete="address-level2"
+                                    value=""
+                                    class="p-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="size" class="block text-sm font-medium leading-6 text-gray-900">Size</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[size]" id="size" autocomplete="address-level1"
+                                    value=""
+                                    class="p-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label for="description"
+                                class="block text-sm font-medium leading-6 text-gray-900">Description</label>
+                            <div class="mt-2">
+                                <textarea id="description" name="property[description]" rows="3"
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-6">
+                            <label for="image1" class="block text-sm font-medium leading-6 text-gray-900">Image Url
+                                1</label>
+                            <div class="mt-2">
+                                <input id="image1" name="property[images]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image2" class="block text-sm font-medium leading-6 text-gray-900">Image Url
+                                2</label>
+                            <div class="mt-2">
+                                <input id="image2" name="property[images]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image3" class="block text-sm font-medium leading-6 text-gray-900">Image Url
+                                3</label>
+                            <div class="mt-2">
+                                <input id="image3" name="property[images]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image4" class="block text-sm font-medium leading-6 text-gray-900">Image Url
+                                4</label>
+                            <div class="mt-2">
+                                <input id="image4" name="property[images]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+
+                        <div class="sm:col-span-3">
+                            <label for="address"
+                                class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <div class="mt-2">
+                                <input id="address" name="property[address]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+                            <div class="mt-2">
+                                <input id="city" name="property[city]" type="text" autocomplete="email" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="latitude"
+                                class="block text-sm font-medium leading-6 text-gray-900">Latitude</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[latitude]" id="latitude" autocomplete="bedroom"
+                                    value=""
+                                    class="w-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="longitude"
+                                class="block text-sm font-medium leading-6 text-gray-900">Longitude</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[longitude]" id="longitude" autocomplete="bedroom"
+                                    value=""
+                                    class="w-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="bedroom" class="block text-sm font-medium leading-6 text-gray-900">Beds</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bedroom]" id="bedroom" autocomplete="bedroom" value=""
+                                    class="p-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="bathroom" class="block text-sm font-medium leading-6 text-gray-900">Bath</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bathroom]" id="bathroom" autocomplete="bedroom"
+                                    value=""
+                                    class="p-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="school" class="block text-sm font-medium leading-6 text-gray-900">School</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[school]" id="school" autocomplete="bedroom" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="bus" class="block text-sm font-medium leading-6 text-gray-900">Bus</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bus]" id="bus" autocomplete="bedroom" value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="restaurant"
+                                class="block text-sm font-medium leading-6 text-gray-900">Restaurant</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[restaurant]" id="restaurant" autocomplete="bedroom"
+                                    value=""
+                                    class="string-input px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <div class="error text-rose-500 text-sm"></div>
+                                </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-10 flex items-center justify-end gap-x-6">
+                        <a href="/properties/" type="button"
+                            class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
+                        <button type="submit"
+                            class="rounded-md bg-[#1d2d44] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#1d1d44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
-        <main class="flex flex-col md:flex-row h-full">
-            <div class="lg:basis-3/5">
-                <div class="lg:pr-24 flex flex-col justify-center gap-y-12 h-full">
-                    <h1 class="text-5xl md:text-6xl font-semibold">Discover Your Dream Home</h1>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sapiente tempora
-                        modi dolore nisi laudantium cupiditate non deserunt quis consequatur!
-                        Dolore consectetur cumque fugiat soluta sunt fuga nulla dicta eaque.
-                    </p>
-                    <div class="">
-                        <div id="btnGroup" class="flex gap-0">
-                            <button id="buy"
-                                class="px-7 py-3 border border-[#a5abb4] md:border-b-0 capitalize text-[#1d2d44] rounded-tl-md border-r"
-                                onClick="">
-                                Buy
-                            </button>
-                            <button id="rent"
-                                class="px-7 py-3 border border-[#a5abb4] md:border-b-0 capitalize text-[#1d2d44] rounded-tr-md border-l-0"
-                                onClick="">
-                                Rent
-                            </button>
-                        </div>
-                        <form action=""
-                            class="flex flex-col gap-y-2 mt-2 md:mt-0 md:flex-row justify-between md:border md:border-[#a5abb4] md:h-16">
-                            <input type="text" name="location" placeholder="Where"
-                                class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:flex-auto md:w-40 md:px-2" />
-                            <input type="number" name="minPrice" placeholder="Min Price" min={0} max={1000000000}
-                                class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:w-20 md:flex-auto md:px-2" />
-                            <input type="number" name="maxPrice" placeholder="Max Price" min={0} max={1000000000}
-                                class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:w-20 md:flex-auto md:px-2" />
-                            <button
-                                class="flex justify-center items-center px-4 text-3xl p-2 text-[#f0ebd8] bg-[#1d2d44] flex-1 md:max-w-20">
-                                <BsSearch />
-                            </button>
-                        </form>
-                        <div>bg-[#f0ebd8]</div>
-                    </div>
-                    <%- include("../partials/searchbar") %>
-                        <div class="hidden md:flex justify-between">
-                            <div class="">
-                                <h1 class="text-3xl font-semibold">16+</h1>
-                                <h2 class="text-xl font-light">Years of Experience</h2>
-                            </div>
-                            <div class="">
-                                <h1 class="text-3xl font-semibold">16+</h1>
-                                <h2 class="text-xl font-light">Awards Gained</h2>
-                            </div>
-                            <div class="">
-                                <h1 class="text-3xl font-semibold">16+</h1>
-                                <h2 class="text-xl font-light">Awards Gained</h2>
-                            </div>
-                        </div>
-                </div>
-            </div>
-            <div class="lg:basis-2/5 items-center bg-[#f0ebd8] relative hidden lg:flex">
-                <img class="rounded-md absolute right-0" src="/images/houses.jpg" alt="" />
-            </div>
-        </main>
+    </form>
+    <script src="./public/javascripts/validateForms.js"></script>
+
 </body>
 
 </html>

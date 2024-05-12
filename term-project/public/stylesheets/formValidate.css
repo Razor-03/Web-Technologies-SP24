@@ -1,0 +1,9 @@
+.error-border {
+    border-width: 1px;
+    border-color: #f43f5e;
+}
+
+.success-border {
+    border-width: 1px;
+    border-color: green;
+}
