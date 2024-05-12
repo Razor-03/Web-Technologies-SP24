@@ -1,5 +1,5 @@
 <% layout("./layouts/boilerplate") %>
-    <form action="">
+    <form action="/properties/<%= property._id %>?_method=PUT" method="post">
         <div>
             <div class="flex justify-around my-20">
                 <div class="border-b border-gray-900/10 pb-12 basis-4/5">
