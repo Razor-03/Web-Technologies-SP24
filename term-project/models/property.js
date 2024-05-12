@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const propertySchema = Schema({
     title: String,
     images: [String],
+    description: String,
     bedroom: Number,
     bathroom: Number,
     price: Number,

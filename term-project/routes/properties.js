@@ -12,8 +12,9 @@ router.get('/:id', async (req, res) => {
     res.render('properties/show', { property });
 });
 
-router.get('/new', (req, res) => {
-    res.render('list/edit');
+router.get('/:id/edit', async (req, res) => {
+    const property = await Property.findById(req.params.id);
+    res.render('properties/edit', { property });
 });
 
 module.exports = router;
