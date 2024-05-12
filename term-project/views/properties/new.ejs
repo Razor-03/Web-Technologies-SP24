@@ -1,0 +1,169 @@
+<% layout("./layouts/boilerplate") %>
+    <form action="/properties" method="post">
+        <div>
+            <div class="flex justify-around my-20">
+                <div class="border-b border-gray-900/10 pb-12 basis-4/5">
+                    <h2 class="text-lg font-semibold leading-7 text-gray-900">Add New Property</h2>
+                    <div class="mt-2 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                        <div class="sm:col-span-4">
+                            <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[title]" id="title" autocomplete="given-name"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Price</label>
+                            <div class="mt-2">
+                                <input type="number" name="property[price]" id="price" autocomplete="address-level2"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+                        <div class="sm:col-span-1">
+                            <label for="size" class="block text-sm font-medium leading-6 text-gray-900">Size</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[size]" id="size" autocomplete="address-level1"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+                        <div class="col-span-full">
+                            <label for="description"
+                                class="block text-sm font-medium leading-6 text-gray-900">Description</label>
+                            <div class="mt-2">
+                                <textarea id="description" name="property[description]" rows="3"
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-6">
+                            <label for="image1" class="block text-sm font-medium leading-6 text-gray-900">Image Url 1</label>
+                            <div class="mt-2">
+                                <input id="image1" name="property[images]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image2" class="block text-sm font-medium leading-6 text-gray-900">Image Url 2</label>
+                            <div class="mt-2">
+                                <input id="image2" name="property[images]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image3" class="block text-sm font-medium leading-6 text-gray-900">Image Url 3</label>
+                            <div class="mt-2">
+                                <input id="image3" name="property[images]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-6">
+                            <label for="image4" class="block text-sm font-medium leading-6 text-gray-900">Image Url 4</label>
+                            <div class="mt-2">
+                                <input id="image4" name="property[images]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+    
+                        <div class="sm:col-span-3">
+                            <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <div class="mt-2">
+                                <input id="address" name="property[address]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+                            <div class="mt-2">
+                                <input id="city" name="property[city]" type="text" autocomplete="email"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="latitude" class="block text-sm font-medium leading-6 text-gray-900">Latitude</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[latitude]" id="latitude" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+                        <div class="sm:col-span-1">
+                            <label for="longitude"
+                                class="block text-sm font-medium leading-6 text-gray-900">Longitude</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[longitude]" id="longitude" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+                        <div class="sm:col-span-1">
+                            <label for="bedroom" class="block text-sm font-medium leading-6 text-gray-900">Beds</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bedroom]" id="bedroom" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+    
+                        <div class="sm:col-span-1">
+                            <label for="bathroom" class="block text-sm font-medium leading-6 text-gray-900">Bath</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bathroom]" id="bathroom" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        
+                        <div class="sm:col-span-1">
+                            <label for="school" class="block text-sm font-medium leading-6 text-gray-900">School</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[school]" id="school" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="bus" class="block text-sm font-medium leading-6 text-gray-900">Bus</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[bus]" id="bus" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-1">
+                            <label for="restaurant" class="block text-sm font-medium leading-6 text-gray-900">Restaurant</label>
+                            <div class="mt-2">
+                                <input type="text" name="property[restaurant]" id="restaurant" autocomplete="bedroom"
+                                    value=""
+                                    class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-10 flex items-center justify-end gap-x-6">
+                        <a href="/properties/" type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
+                        <button type="submit"
+                            class="rounded-md bg-[#1d2d44] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#1d1d44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>

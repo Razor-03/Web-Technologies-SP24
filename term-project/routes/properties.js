@@ -7,6 +7,10 @@ router.get('/', async (req, res) => {
     res.render('properties/index', { properties });
 });
 
+router.get('/new', (req, res) => {
+    res.render('properties/new');
+});
+
 router.get('/:id', async (req, res) => {
     const property = await Property.findById(req.params.id);
     res.render('properties/show', { property });
@@ -21,7 +25,8 @@ router.post('/', async (req, res) => {
     const property = new Property(req.body.property);
     await property.save();
     res.redirect(`/properties/${property._id}`);
-})
+    // console.log(req.body.property);
+});
 
 router.put('/:id', async (req, res) => {
     // res.send(req.body.property);
