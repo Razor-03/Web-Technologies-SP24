@@ -4,6 +4,7 @@ const path = require("path");
 const ejsMate = require('ejs-mate');
 const mongoose = require("mongoose");
 const methodOverride = require('method-override');
+const ExpressError = require("./utils/ExpressError");
 
 mongoose.connect('mongodb://localhost:27017/envision-estate');
 
@@ -37,6 +38,16 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     const {name, password } = req.body;
     console.log(name);
+});
+
+app.all('*', (req, res, next) => {
+    next(new ExpressError('Page Not Found', 404));
+});
+
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    if (!err.message) err.message = 'Oh No, Something Went Wrong!';
+    res.status(statusCode).render('error', { err });
 });
 
 app.listen(3000, (req, res) => {
