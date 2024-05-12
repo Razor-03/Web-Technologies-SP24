@@ -17,6 +17,12 @@ router.get('/:id/edit', async (req, res) => {
     res.render('properties/edit', { property });
 });
 
+router.post('/', async (req, res) => {
+    const property = new Property(req.body.property);
+    await property.save();
+    res.redirect(`/properties/${property._id}`);
+})
+
 router.put('/:id', async (req, res) => {
     // res.send(req.body.property);
     const property = await Property.findByIdAndUpdate(req.params.id, {...req.body.property});
