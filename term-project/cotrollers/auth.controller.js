@@ -7,9 +7,12 @@ const hashPassword = async (password) => {
     console.log(hash);
 }
 
-exports.register = (req, res) => {
-    console.log(req.body);
-    res.send('Register Route');
+exports.postRegister = (req, res) => {
+    res.render("users/register");
+}
+
+exports.getRegister = (req, res) => {
+    res.render("user/register");
 }
 
 exports.getLogin = async (req, res) => {

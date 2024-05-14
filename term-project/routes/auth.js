@@ -1,10 +1,12 @@
 const express = require("express");
-const { register, getLogin, postLogin, logout } = require("../cotrollers/auth.controller.js");
+const { getRegister, postRegister, getLogin, postLogin, logout } = require("../cotrollers/auth.controller.js");
 const router = express.Router({ mergeParams: true});
 
 router.use(express.json());
 
-router.post('/register', register);
+router.post('/register', postRegister);
+
+router.get('/register', getRegister);
 
 router.get('/login', getLogin);
 
