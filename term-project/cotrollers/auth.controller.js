@@ -1,7 +1,8 @@
 const bcrypt = require("bcryptjs");
-const hashPassword = async () => {
+const hashPassword = async (password) => {
     const salt = await bcrypt.genSalt(10);
-    return salt;
+    const hash = await bcrypt.hash(password, salt);
+    console.log(hash);
 }
 
 exports.register = (req, res) => {
@@ -12,8 +13,7 @@ exports.register = (req, res) => {
 exports.login = async (req, res) => {
     // const { name, password} = req.body;
     // console.log(name, password);
-    const salted = await hashPassword();
-    console.log(salted);
+    await hashPassword("12345");
     res.render("user/login");
 }
 
