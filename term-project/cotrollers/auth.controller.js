@@ -4,8 +4,9 @@ exports.register = (req, res) => {
 }
 
 exports.login = (req, res) => {
-    const { name, password} = req.body;
-    console.log(name, password);
+    // const { name, password} = req.body;
+    // console.log(name, password);
+    res.render("user/login");
 }
 
 exports.logout = (req, res) => {

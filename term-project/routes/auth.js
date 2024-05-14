@@ -6,7 +6,7 @@ router.use(express.json());
 
 router.post('/register', register);
 
-router.post('/login', login);
+router.get('/login', login);
 
 router.post('/logout', logout);
 
