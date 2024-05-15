@@ -7,8 +7,12 @@ const hashPassword = async (password) => {
     console.log(hash);
 }
 
-exports.postRegister = (req, res) => {
-    const { email, password } = req.body;
+exports.postRegister = async (req, res) => {
+    const { username, email, password } = req.body;
+    const hashed = await bcrypt.hash(password, 12);
+    const newUser = new User({username, email, password: hashed});
+    await newUser.save();
+    res.redirect('/');
 }
 
 exports.getRegister = (req, res) => {
