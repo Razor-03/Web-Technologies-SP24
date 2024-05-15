@@ -17,7 +17,7 @@
                     </div>
                     <%- include("../partials/propertyInfo") %>
                         <div class="flex gap-6 justify-end mt-10">
-                            <a href="/property/<%= property._id %>/edit" class="text-white bg-[#1d2d44] py-1 px-2 rounded-md w-12 text-center">Edit</a>
+                            <a href="/properties/<%= property._id %>/edit" class="text-white bg-[#1d2d44] py-1 px-2 rounded-md w-12 text-center">Edit</a>
                             <form action="/properties/<%= property._id %>?_method=DELETE" class="inline bg-red-600 text-white py-1 px-2 rounded-md" method="post">
                                 <button class="">Delete</button>
                             </form>

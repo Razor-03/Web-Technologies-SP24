@@ -8,7 +8,7 @@ const hashPassword = async (password) => {
 }
 
 exports.postRegister = (req, res) => {
-    res.render("users/register");
+    const { email, password } = req.body;
 }
 
 exports.getRegister = (req, res) => {
