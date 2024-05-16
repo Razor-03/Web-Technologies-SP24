@@ -24,11 +24,11 @@ app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
-
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 const sessionConfig = {
     secret: "lvzc11_1351",
@@ -41,9 +41,17 @@ const sessionConfig = {
     }
 };
 
+const requireLogin = (req, res, next) => {
+    if (!req.session.user_id) {
+        return res.redirect("/login");
+    }
+    next();
+}
+
 app.use(session(sessionConfig));
 
-app.use("/properties", propertyRoutes);
+
+app.use("/properties", requireLogin, propertyRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {

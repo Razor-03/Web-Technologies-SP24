@@ -12,6 +12,7 @@ exports.postRegister = async (req, res) => {
     const hashed = await bcrypt.hash(password, 12);
     const newUser = new User({username, email, password: hashed});
     await newUser.save();
+    req.session.user_id = newUser._id;
     res.redirect('/');
 }
 
@@ -25,16 +26,22 @@ exports.getLogin = async (req, res) => {
 
 exports.postLogin = async (req, res) => {
     const { username, password } = req.body;
+    // res.send(password);
     const user = await User.findOne({ username });
-    const isValidPwd = await bcrypt.compare(password, user.password);
-
-    if (isValidPwd) {
-        res.redirect("/");
+    if (user) {
+        const isValidPwd = await bcrypt.compare(password, user.password);
+        if (isValidPwd) {
+            req.session.user_id = user._id;
+            res.redirect("/");
+        } else {
+            res.redirect("/login");
+        }
     } else {
-        
+        res.redirect("/login");
     }
 }
 
 exports.logout = (req, res) => {
-    res.send('Logout Route');
+    req.session.user_id = null;
+    res.redirect("/");
 };
