@@ -37,6 +37,7 @@ exports.postLogin = async (req, res) => {
             res.redirect("/login");
         }
     } else {
+        req.flash("error", "Invalid Credentials");
         res.redirect("/login");
     }
 }

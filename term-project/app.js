@@ -4,6 +4,7 @@ const path = require("path");
 const ejsMate = require('ejs-mate');
 const mongoose = require("mongoose");
 const session = require("express-session");
+const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 const ExpressError = require("./utils/ExpressError");
@@ -49,6 +50,13 @@ const requireLogin = (req, res, next) => {
 }
 
 app.use(session(sessionConfig));
+app.use(flash());
+
+app.use((req, res, next) => {
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+})
 
 
 app.use("/properties", requireLogin, propertyRoutes);
