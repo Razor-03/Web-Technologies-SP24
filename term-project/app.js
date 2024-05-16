@@ -5,7 +5,6 @@ const ejsMate = require('ejs-mate');
 const mongoose = require("mongoose");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const bcrypt = require("bcryptjs");
 const methodOverride = require('method-override');
 const ExpressError = require("./utils/ExpressError");
 

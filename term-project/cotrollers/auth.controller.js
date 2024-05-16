@@ -20,16 +20,19 @@ exports.getRegister = (req, res) => {
 }
 
 exports.getLogin = async (req, res) => {
-    // const { name, password} = req.body;
-    // console.log(name, password);
-    await hashPassword("12345");
     res.render("user/login");
 }
 
 exports.postLogin = async (req, res) => {
-    const { email, password } = req.body;
-    const hash = await bcrypt.hash(password, 12);
-    res.send(hash);
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+    const isValidPwd = await bcrypt.compare(password, user.password);
+
+    if (isValidPwd) {
+        res.redirect("/");
+    } else {
+        
+    }
 }
 
 exports.logout = (req, res) => {
