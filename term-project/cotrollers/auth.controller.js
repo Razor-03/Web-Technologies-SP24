@@ -12,7 +12,7 @@ exports.postRegister = async (req, res) => {
     const hashed = await bcrypt.hash(password, 12);
     const newUser = new User({username, email, password: hashed});
     await newUser.save();
-    req.session.user_id = newUser._id;
+    req.session.user = newUser;
     res.redirect('/');
 }
 
@@ -31,13 +31,14 @@ exports.postLogin = async (req, res) => {
     if (user) {
         const isValidPwd = await bcrypt.compare(password, user.password);
         if (isValidPwd) {
-            req.session.user_id = user._id;
+            req.session.user = user;
             res.redirect("/");
         } else {
+            req.flash("error", "Invalid Credentials");
             res.redirect("/login");
         }
     } else {
-        req.flash("error", "Invalid Credentials");
+        req.flash("error", "User doesn't exist.");
         res.redirect("/login");
     }
 }
