@@ -42,25 +42,18 @@ const sessionConfig = {
     }
 };
 
-const requireLogin = (req, res, next) => {
-    if (!req.session.user) {
-        return res.redirect("/login");
-    }
-    next();
-}
-
 app.use(session(sessionConfig));
 app.use(flash());
 
 app.use((req, res, next) => {
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
-    res.locals.user_id = req.session.user_id;
+    res.locals.user = req.session.user;
     next();
 })
 
 
-app.use("/properties", requireLogin, propertyRoutes);
+app.use("/properties", propertyRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
