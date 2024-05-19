@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Property = require("../models/property");
+const { requireLogin, isAuthor } = require("../middleware");
 
 router.get('/', async (req, res) => {
     const properties = await Property.find({});
@@ -8,7 +9,7 @@ router.get('/', async (req, res) => {
     
 });
 
-router.get('/new', (req, res) => {
+router.get('/new', requireLogin, (req, res) => {
     res.render('properties/new');
 });
 
@@ -18,12 +19,12 @@ router.get('/:id', async (req, res) => {
     res.render('properties/show', { property });
 });
 
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit', requireLogin, isAuthor, async (req, res) => {
     const property = await Property.findById(req.params.id);
     res.render('properties/edit', { property });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', requireLogin, async (req, res) => {
     const property = new Property(req.body.property);
     property.author = req.session.user._id;
     await property.save();
@@ -31,13 +32,13 @@ router.post('/', async (req, res) => {
     // console.log(req.body.property);
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', requireLogin, isAuthor, async (req, res) => {
     // res.send(req.body.property);
     const property = await Property.findByIdAndUpdate(req.params.id, {...req.body.property});
     res.redirect(`/properties/${req.params.id}`);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', requireLogin, isAuthor, async (req, res) => {
     const property = await Property.findByIdAndDelete(req.params.id);
     res.redirect(`/properties`);
 });
