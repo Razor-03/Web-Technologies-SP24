@@ -11,14 +11,12 @@
         <a href="/properties" class="hidden md:inline">Browse</a>
         <a href="" class="hidden md:inline">About</a>
         <a href="" class="hidden md:inline">Contact Us</a>
-        <a href="/login" class="hidden md:inline">Login</a>
-        <a href="/register" class="hidden md:inline">Register</a>
     </div>
     <div class="basis-2/5 flex lg:bg-[#f0ebd8] justify-end items-center gap-x-2 sm:gap-x-10 h-full md:pe-4">
-        <% if (user_id) {%>
+        <% if (user) {%>
             <div class="user flex gap-x-4 items-center font-semibold">
-                <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="profile-pic" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
+                <!-- <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="profile-pic" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" /> -->
                 <span class="hidden md:inline">John Doe</span>
             </div>
             <a href="/properties"
@@ -28,6 +26,9 @@
                     3</div>
                 Profile
             </a>
+            <form action="/logout" method="post">
+                <button class="py-2 px-4 cursor-pointer bg-[#1d2d44] text-[#f0ebd8] me-3 relative rounded-md hidden md:inline">Logout</button>
+            </form>
             <% } else { %>
                 <a href="/login" class="hidden md:inline">Log In</a>
                 <a href="/register" class="bg-[#1d2d44] text-[#f0ebd8] py-1 px-3 rounded-md">Sign Up</a>
