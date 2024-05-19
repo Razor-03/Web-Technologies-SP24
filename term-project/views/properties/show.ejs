@@ -3,6 +3,7 @@
         <div class="basis-3/5 details block lg:flex">
             <div class="lg:pr-24 flex flex-row justify-center gap-y-12 h-full">
                 <div class="basis-11/12">
+                    <%- include("../partials/flash") %>
                     <div class="flex w-full h-content gap-1 max-h-80 lg:gap-10">
                         <div class="bigImage basis-3/4">
                             <img src="<%= property.images[0] %>" alt="slider-image"
@@ -16,12 +17,14 @@
                         </div>
                     </div>
                     <%- include("../partials/propertyInfo") %>
+                    <% if (user && property.author.equals(user._id)) {%>
                         <div class="flex gap-6 justify-end mt-10">
                             <a href="/properties/<%= property._id %>/edit" class="text-white bg-[#1d2d44] py-1 px-2 rounded-md w-12 text-center">Edit</a>
                             <form action="/properties/<%= property._id %>?_method=DELETE" class="inline bg-red-600 text-white py-1 px-2 rounded-md" method="post">
                                 <button class="">Delete</button>
                             </form>
                         </div>
+                    <% } %>
                 </div>
                 <!-- <div class="basis-1/5"></div> -->
             </div>
