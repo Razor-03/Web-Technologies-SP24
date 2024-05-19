@@ -31,8 +31,9 @@ exports.postLogin = async (req, res) => {
     if (user) {
         const isValidPwd = await bcrypt.compare(password, user.password);
         if (isValidPwd) {
+            const redirectTo = res.locals.returnTo || '/properties'; 
             req.session.user = user;
-            res.redirect("/");
+            res.redirect(redirectTo);
         } else {
             req.flash("error", "Invalid Credentials");
             res.redirect("/login");
