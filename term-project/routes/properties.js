@@ -25,6 +25,7 @@ router.get('/:id/edit', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const property = new Property(req.body.property);
+    property.author = req.session.user._id;
     await property.save();
     res.redirect(`/properties/${property._id}`);
     // console.log(req.body.property);
