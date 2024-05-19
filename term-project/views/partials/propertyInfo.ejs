@@ -6,6 +6,9 @@
                 <LuMapPin />
                 <span><%= property.address %></span>
             </div>
+            <div class="address flex gap-1 items-center text-[#555]">
+                <span>Posted by: <%= property.author.username %></span>
+            </div>
             <div class="price text-lg font-light py-2 px-3 bg-[#ffe6a7] w-fit rounded-md">
                 $ <%= property.price %>
             </div>

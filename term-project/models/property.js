@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const User = require('./user');
 const Schema = mongoose.Schema;
 
 const propertySchema = Schema({
@@ -15,7 +16,11 @@ const propertySchema = Schema({
     city: String,
     school: String,
     bus: String,
-    restaurant: String
+    restaurant: String,
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 module.exports = mongoose.model('Property', propertySchema);

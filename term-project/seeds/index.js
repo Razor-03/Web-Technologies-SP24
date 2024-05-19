@@ -18,7 +18,7 @@ db.once("open", () => {
 const seedDB = async () => {
     await Property.deleteMany();
     for (let property of listData) {
-        const estate = new Property(property);
+        const estate = new Property({...property, author:'66449572e53672e0b5d79bb1'});
         await estate.save();
     }
 }
