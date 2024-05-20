@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Property = require("../models/property");
 const multer = require("multer");
-const upload = multer({dest: 'uploads/'});
+const { storage } = require("../cloudinary");
+const upload = multer({ storage });
 const { requireLogin, isAuthor } = require("../middleware");
 
 router.get('/', async (req, res) => {
@@ -27,12 +28,13 @@ router.get('/:id/edit', requireLogin, isAuthor, async (req, res) => {
 });
 
 router.post('/', requireLogin, upload.array("image"), async (req, res) => {
-    const property = new Property(req.body.property);
-    property.author = req.session.user._id;
-    await property.save();
-    res.redirect(`/properties/${property._id}`);
-    console.log(req.body.property);
-    // console.log(req.body, req.files);
+    // const property = new Property(req.body.property);
+    // property.author = req.session.user._id;
+    // await property.save();
+    // res.redirect(`/properties/${property._id}`);
+    // console.log(req.body.property);
+    console.log(req.body, req.files);
+    res.send("It Worked!");
 });
 
 router.put('/:id', requireLogin, isAuthor, async (req, res) => {
