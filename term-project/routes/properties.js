@@ -39,9 +39,12 @@ router.post('/', requireLogin, upload.array("image"), async (req, res) => {
     // res.send("It Worked!");
 });
 
-router.put('/:id', requireLogin, isAuthor, async (req, res) => {
+router.put('/:id', requireLogin, isAuthor, upload.array("image"), async (req, res) => {
     // res.send(req.body.property);
     const property = await Property.findByIdAndUpdate(req.params.id, {...req.body.property});
+    const images = req.files.map(file => ({ url: file.path, filename: file.filename }));
+    property.images.push(...images);
+    await property.save();
     res.redirect(`/properties/${req.params.id}`);
 });
 
