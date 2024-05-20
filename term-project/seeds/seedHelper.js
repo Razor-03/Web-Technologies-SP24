@@ -2,10 +2,18 @@ module.exports.listData = [
     {
       title: "A Great Apartment Next to the Beach!",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 2,
@@ -23,10 +31,18 @@ module.exports.listData = [
     {
       title: "An Awesome Apartment Near the Park! Almost too good to be true!",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 3,
@@ -44,10 +60,18 @@ module.exports.listData = [
     {
       title: "A New Apartment in the City!",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 1,
@@ -65,10 +89,18 @@ module.exports.listData = [
     {
       title: "Great Location! Great Price! Great Apartment!",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 2,
@@ -86,10 +118,18 @@ module.exports.listData = [
     {
       title: "Apartment 5",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 3,
@@ -107,10 +147,18 @@ module.exports.listData = [
     {
       title: "Apartment 6",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 1,
@@ -128,10 +176,18 @@ module.exports.listData = [
     {
       title: "Apartment 7",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 2,
@@ -149,10 +205,18 @@ module.exports.listData = [
     {
       title: "Apartment 8",
       images: [
-      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
+        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
+        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
+      },
+      {
+        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
+        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
+      }
     ],
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
       bedroom: 3,
