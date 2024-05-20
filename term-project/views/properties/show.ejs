@@ -4,27 +4,36 @@
             <div class="lg:pr-24 flex flex-row justify-center gap-y-12 h-full">
                 <div class="basis-11/12">
                     <%- include("../partials/flash") %>
-                    <div class="flex w-full h-content gap-1 max-h-80 lg:gap-10">
-                        <div class="bigImage basis-3/4">
-                            <img src="<%= property.images[0] %>" alt="slider-image"
-                                class="h-full w-full object-cover rounded-md" />
-                        </div>
-                        <div class="smallImages basis-1/4 flex flex-col gap-1 sm:gap-4">
-                            <% property.images.slice(1).forEach(function(image) { %>
-                                <img src="<%= image %>" alt="smallImage"
-                                    class="h-16 sm:h-24 object-cover w-full rounded-md" />
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <% property.images.forEach((img, i) => {%>
+                                <div class="carousel-item <%= i === 0 ? "active": "" %>">
+                                    <img src="<%= img.url %>" class="d-block w-100" alt="...">
+                                </div>
                                 <% }) %>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                    </div>
-                    <%- include("../partials/propertyInfo") %>
-                    <% if (user && property.author.equals(user._id)) {%>
-                        <div class="flex gap-6 justify-end mt-10">
-                            <a href="/properties/<%= property._id %>/edit" class="text-white bg-[#1d2d44] py-1 px-2 rounded-md w-12 text-center">Edit</a>
-                            <form action="/properties/<%= property._id %>?_method=DELETE" class="inline bg-red-600 text-white py-1 px-2 rounded-md" method="post">
-                                <button class="">Delete</button>
-                            </form>
-                        </div>
-                    <% } %>
+                        <%- include("../partials/propertyInfo") %>
+                            <% if (user && property.author.equals(user._id)) {%>
+                                <div class="flex gap-6 justify-end mt-10">
+                                    <a href="/properties/<%= property._id %>/edit"
+                                        class="text-white bg-[#1d2d44] py-1 px-2 rounded-md w-12 text-center">Edit</a>
+                                    <form action="/properties/<%= property._id %>?_method=DELETE"
+                                        class="inline bg-red-600 text-white py-1 px-2 rounded-md" method="post">
+                                        <button class="">Delete</button>
+                                    </form>
+                                </div>
+                                <% } %>
                 </div>
                 <!-- <div class="basis-1/5"></div> -->
             </div>

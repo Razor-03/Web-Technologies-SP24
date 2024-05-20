@@ -28,13 +28,15 @@ router.get('/:id/edit', requireLogin, isAuthor, async (req, res) => {
 });
 
 router.post('/', requireLogin, upload.array("image"), async (req, res) => {
-    // const property = new Property(req.body.property);
-    // property.author = req.session.user._id;
-    // await property.save();
-    // res.redirect(`/properties/${property._id}`);
+    const property = new Property(req.body.property);
+    property.author = req.session.user._id;
+    property.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
+    await property.save();
+    // console.log(property);
+    res.redirect(`/properties/${property._id}`);    
     // console.log(req.body.property);
-    console.log(req.body, req.files);
-    res.send("It Worked!");
+    // console.log(req.body, req.files);
+    // res.send("It Worked!");
 });
 
 router.put('/:id', requireLogin, isAuthor, async (req, res) => {
