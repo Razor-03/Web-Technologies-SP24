@@ -9,8 +9,10 @@ cloudinary.config({
 
 const storage = new CloudinaryStorage({
     cloudinary,
-    folder: "EnvisionEstate",
-    allowedFormats: ["jpeg", "png", "jpg"]
+    params: {
+        folder: "EnvisionEstate",
+        allowedFormats: ["jpeg", "png", "jpg"]
+    }
 });
 
 module.exports = { cloudinary, storage };
