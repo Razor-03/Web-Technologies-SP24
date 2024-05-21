@@ -24,6 +24,7 @@ db.once("open", () => {
 
 const propertyRoutes = require("./routes/properties");
 const authRoutes = require("./routes/auth");
+const propertyApiRoutes = require("./routes/api/properties");
 
 app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
@@ -58,6 +59,7 @@ app.use((req, res, next) => {
 
 
 app.use("/properties", propertyRoutes);
+app.use("/api/properties", propertyApiRoutes);
 app.use("/", authRoutes);
 
 app.get("/", (req, res) => {
