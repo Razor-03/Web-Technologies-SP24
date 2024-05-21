@@ -15,8 +15,17 @@ const propertySchema = Schema({
     bathroom: Number,
     price: Number,
     address: String,
-    latitude: Number,
-    longitude: Number,
+    location: {
+        type: {
+            type: String,
+            enum: ["Point"],
+            required: true
+        },
+        coordinates: {
+            type: [Number],
+            required: true
+        }
+    },
     size: Number,
     city: String,
     school: String,
