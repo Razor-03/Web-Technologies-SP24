@@ -5,6 +5,10 @@ const multer = require("multer");
 const { storage } = require("../cloudinary");
 const upload = multer({ storage });
 const { requireLogin, isAuthor } = require("../middleware");
+const { cloudinary } = require("../cloudinary");
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding")
+const mapBoxToken = process.env.MAPBOX_TOKEN;
+const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 
 router.get('/', async (req, res) => {
     const properties = await Property.find({});
@@ -18,7 +22,7 @@ router.get('/new', requireLogin, (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const property = await Property.findById(req.params.id).populate('author');
-    console.log(property);
+    // console.log(property);
     res.render('properties/show', { property });
 });
 
@@ -28,12 +32,15 @@ router.get('/:id/edit', requireLogin, isAuthor, async (req, res) => {
 });
 
 router.post('/', requireLogin, upload.array("image"), async (req, res) => {
-    const property = new Property(req.body.property);
-    property.author = req.session.user._id;
-    property.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
+    const geoData = await geocoder.forwardGeocode({
+        query: 'Yosemite, CA'
+    })
+    // const property = new Property(req.body.property);
+    // property.author = req.session.user._id;
+    // property.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     await property.save();
     // console.log(property);
-    res.redirect(`/properties/${property._id}`);    
+    // res.redirect(`/properties/${property._id}`);
     // console.log(req.body.property);
     // console.log(req.body, req.files);
     // res.send("It Worked!");
@@ -45,6 +52,12 @@ router.put('/:id', requireLogin, isAuthor, upload.array("image"), async (req, re
     const images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     property.images.push(...images);
     await property.save();
+    if (req.body.deleteImages) {
+        for(let filename of req.body.deleteImages) {
+            await cloudinary.uploader.destroy(filename);
+        }
+        await property.updateOne({ $pull: { images: { filename: {$in: req.body.deleteImages}}}});
+    }
     res.redirect(`/properties/${req.params.id}`);
 });
 
