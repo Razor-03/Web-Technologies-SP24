@@ -30,8 +30,8 @@
                             <label for="address"
                                 class="block text-sm font-medium leading-6 text-gray-900">Address</label>
                             <div class="mt-2">
-                                <input id="string-input address" name="property[address]" type="text" autocomplete="email"
-                                    value="<%= property.address %>"
+                                <input id="string-input address" name="property[address]" type="text"
+                                    autocomplete="email" value="<%= property.address %>"
                                     class="string-input px-4 block w-full rounded-md  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                 <div class="error text-rose-500 text-sm"></div>
                             </div>
@@ -132,6 +132,21 @@
                                     <p class="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 sm:col-span-1">
+                        <h2 class="block text-sm font-medium leading-6 text-gray-900">Images to delete</h2>
+                        <div class="flex flex-wrap gap-x-6 justify-center">
+                            <% property.images.forEach((img, index)=> { %>
+                                <div>
+                                    <img src="<%= img.url %>" alt="" class="h-32 w-52 object-cover mt-4">
+                                    <input type="checkbox" name="deleteImages[]" id="image-<%= index %>"
+                                        value="<%= img.filename %>">
+                                    <label for="image-<%= index %>"
+                                        class="text-sm font-medium leading-6 text-gray-900">Delete</label>
+                                </div>
+                                <% }) %>
                         </div>
                     </div>
                     <div class="mt-10 flex items-center justify-end gap-x-6">
