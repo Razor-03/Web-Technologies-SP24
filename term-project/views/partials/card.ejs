@@ -1,8 +1,8 @@
 <div class="h-screen flex flex-col gap-14">
     <% properties.map(p=> { %>
-        <div class="flex gap-x-6">
+        <div class="flex gap-x-6 max-h-56">
             <!-- <p class="text-4xl"></p> -->
-            <div class="basis-2/5 h-48">
+            <div class="basis-2/5 max-h-48">
                 <a href='/properties/<%= p._id %>' class="basis-2/5 h-48">
                     <img src="<%= p.images[0].url %>" alt="" class="w-full h-full object-cover rounded-md" />
                 </a>

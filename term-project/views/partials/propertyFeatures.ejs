@@ -64,7 +64,7 @@
     </div>
     <p class="font-semibold text-lg">Location</p>
     <div class="mapContainer w-full min-h-48 z-10">
-        <Map items={[singlePostData]} />
+        <div id='map' class="h-full"></div>
     </div>
     <div class="buttons flex justify-between text-sm sm:text-base">
         <button class="flex items-center p-4 bg-white rounded-md gap-2">
@@ -77,3 +77,8 @@
         </button>
     </div>
 </div>
+<script>
+    const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+    const property = <%- JSON.stringify(property) %>;
+</script>
+<script src="/javascripts/showPageMap.js"></script>
