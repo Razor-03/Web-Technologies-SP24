@@ -87,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="sm:col-span-1">
+                        <!-- <div class="sm:col-span-1">
                             <label for="latitude"
                                 class="block text-sm font-medium leading-6 text-gray-900">Latitude</label>
                             <div class="mt-2">
@@ -107,7 +107,7 @@
                                     class="w-integer px-4 block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                 <div class="error text-rose-500 text-sm"></div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-span-full">
                             <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Property
@@ -164,39 +164,4 @@
         </div>
     </form>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const fileInput = document.getElementById('image');
-            const fileCardsContainer = document.getElementById('file-cards');
-
-            fileInput.addEventListener('change', function () {
-                fileCardsContainer.innerHTML = ''; // Clear previous file cards
-                const files = fileInput.files;
-
-                if (files.length > 0) {
-                    Array.from(files).forEach(file => {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            const fileCard = document.createElement('div');
-                            fileCard.className = 'w-52 bg-white shadow rounded-lg border border-gray-200 p- flex flex-col items-center';
-
-                            const img = document.createElement('img');
-                            img.src = e.target.result;
-                            img.alt = file.name;
-                            img.className = 'w-full h-4/5 object-center p-1.5 rounded-md';
-
-                            const fileName = document.createElement('p');
-                            fileName.textContent = file.name.slice(0, 24) + "...";
-                            fileName.className = 'text-sm leading-6 text-gray-600';
-
-                            fileCard.appendChild(img);
-                            fileCard.appendChild(fileName);
-
-                            fileCardsContainer.appendChild(fileCard);
-                        }
-                        reader.readAsDataURL(file);
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="/javascripts/imageUpload.js"></script>
