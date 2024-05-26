@@ -1,12 +1,12 @@
 <% layout('/layouts/boilerplate') -%>
-    <div class="flex flex-row h-full">
-        <div class="basis-1/2 lg:basis-3/5">
-            <div class="lg:pr-24 flex flex-col gap-20 h-full overflow-y-scroll">
+    <div class="max-w-[100%] md:max-w-[90%] xl:max-w-[90%] mx-auto px-[20px] flex flex-row h-full">
+        <div class="">
+            <div class="lg:pr-24 flex flex-col gap-20 h-full">
                 <%- include("../partials/filter") %>
                 <%- include("../partials/card") %>
             </div>
         </div>
-        <div class="basis-1/2 lg:basis-2/5">
+        <!-- <div class="basis-1/2 lg:basis-2/5">
             map here
-        </div>
+        </div> -->
     </div>
