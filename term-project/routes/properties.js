@@ -11,10 +11,53 @@ const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 
 router.get('/', async (req, res) => {
-    const properties = await Property.find({});
-    res.render('properties/index', { properties });
-    
+    try {
+        const { location, minPrice, maxPrice, type, property, bedroom, bathroom } = req.query;
+
+        let query = {};
+
+        if (location) {
+            // Assuming location is a city name or part of an address
+            query.$or = [
+                { city: new RegExp(location, 'i') },
+                { address: new RegExp(location, 'i') }
+            ];
+        }
+
+        if (minPrice) {
+            query.price = { ...query.price, $gte: parseInt(minPrice) };
+        }
+
+        if (maxPrice) {
+            query.price = { ...query.price, $lte: parseInt(maxPrice) };
+        }
+
+        if (bedroom) {
+            query.bedroom = { ...query.bedroom, $gte: parseInt(bedroom) };
+        }
+
+        if (bathroom) {
+            query.bathroom = { ...query.bedroom, $gte: parseInt(bathroom) };
+        }
+
+        if(type) {
+            query.type = type;
+        }
+
+        if(property) {
+            query.property = property;
+        }
+
+        const properties = await Property.find(query);
+        console.log(properties);
+
+        res.render('properties/index', { properties });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server Error");
+    }
 });
+
 
 router.get('/new', requireLogin, (req, res) => {
     res.render('properties/new');

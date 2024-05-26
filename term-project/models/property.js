@@ -10,6 +10,11 @@ const propertySchema = Schema({
             filename: String
         }
     ],
+    type: {
+        type: String,
+        enum: ['Buy', 'Rent'],
+        required: true
+    },
     description: String,
     bedroom: Number,
     bathroom: Number,

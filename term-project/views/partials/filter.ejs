@@ -1,65 +1,77 @@
-<div class="flex flex-col gap-y-2.5">
-    <h1 class="text-3xl font-light">
-        Search results for <b>London</b>
-    </h1>
-    <div class="w-full">
-        <div class="flex flex-col gap-2">
-            <label htmlFor="type" class="text-sm">
-                Type
-            </label>
-            <select id="type" name="type" class="p-4 border border-[#a5abb4] rounded-md">
-                <option value="">any</option>
-                <option value="buy">Buy</option>
-                <option value="rent">Rent</option>
-            </select>
+<form action="/properties">
+    <div class="flex flex-col gap-y-2.5">
+        <!-- <h1 class="text-3xl font-light">
+        Search results for <b></b>
+    </h1> -->
+        <div class="">
+            <div class="flex flex-col gap-2">
+                <label htmlFor="type" class="text-sm">
+                    Type
+                </label>
+                <select id="type" name="type" class="p-4 border border-[#a5abb4] rounded-md">
+                    <option value="">any</option>
+                    <option value="buy">Buy</option>
+                    <option value="rent">Rent</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex justify-between">
+
+            <div class="flex flex-col">
+                <label htmlFor="property" class="text-sm">
+                    Property
+                </label>
+                <select id="property" name="property" class="w-24 p-2 border border-[#a5abb4] rounded-sm">
+                    <option value="">any</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="condo">Condo</option>
+                    <option value="land">Land</option>
+                </select>
+            </div>
+            <div class="flex flex-col">
+                <label htmlFor="minPrice" class="text-sm">
+                    Min Price
+                </label>
+                <input class="w-24 p-2 border border-[#a5abb4] rounded-sm" type="number" id="minPrice" name="minPrice"
+                    placeholder="any" />
+            </div>
+            <div class="flex flex-col">
+                <label htmlFor="maxPrice" class="text-sm">
+                    Max Price
+                </label>
+                <input class="w-24 p-2 border border-[#a5abb4] rounded-sm" type="text" id="maxPrice" name="maxPrice"
+                    placeholder="any" />
+            </div>
+            <div class="flex flex-col">
+                <label htmlFor="bedroom" class="text-sm">
+                    Bedroom
+                </label>
+                <select id="bedroom" name="bedroom" class="w-24 p-2 border border-[#a5abb4] rounded-sm">
+                    <option value="">any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col">
+                <label htmlFor="bedroom" class="text-sm">
+                    Bathroom
+                </label>
+                <select id="bathroom" name="bathroom" class="w-24 p-2 border border-[#a5abb4] rounded-sm">
+                    <option value="">any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                </select>
+            </div>
+
+            <button class="p-1 flex justify-center items-center text-3xl rounded-md text-[#f0ebd8] bg-[#1d2d44] w-28">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
     </div>
-    <div class="flex justify-between">
-        <div class="flex flex-col">
-            <label htmlFor="type" class="text-sm">
-                Type
-            </label>
-            <select id="type" name="type" class="p-2 w-24 border border-[#a5abb4] rounded-sm">
-                <option value="">any</option>
-                <option value="buy">Buy</option>
-                <option value="rent">Rent</option>
-            </select>
-        </div>
-        <div class="flex flex-col">
-            <label htmlFor="property" class="text-sm">
-                Property
-            </label>
-            <select id="property" name="property" class="w-24 p-2 border border-[#a5abb4] rounded-sm">
-                <option value="">any</option>
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-                <option value="condo">Condo</option>
-                <option value="land">Land</option>
-            </select>
-        </div>
-        <div class="flex flex-col">
-            <label htmlFor="minPrice" class="text-sm">
-                Min Price
-            </label>
-            <input class="w-24 p-2 border border-[#a5abb4] rounded-sm" type="number" id="minPrice" name="minPrice"
-                placeholder="any" />
-        </div>
-        <div class="flex flex-col">
-            <label htmlFor="maxPrice" class="text-sm">
-                Max Price
-            </label>
-            <input class="w-24 p-2 border border-[#a5abb4] rounded-sm" type="text" id="maxPrice" name="maxPrice"
-                placeholder="any" />
-        </div>
-        <div class="flex flex-col">
-            <label htmlFor="bedroom" class="text-sm">
-                Bedroom
-            </label>
-            <input class="w-24 p-2 border border-[#a5abb4] rounded-sm" type="text" id="bedroom" name="bedroom"
-                placeholder="any" />
-        </div>
-        <button class="p-1 flex justify-center items-center text-3xl rounded-md text-[#f0ebd8] bg-[#1d2d44] w-28">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </div>
-</div>
+</form>

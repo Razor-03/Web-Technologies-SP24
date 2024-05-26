@@ -1,5 +1,14 @@
 const btnGroup = document.querySelector("#btnGroup");
 
+document.getElementById('buy').addEventListener('click', () => {
+    document.getElementById('propertyType').value = 'Buy';
+});
+
+document.getElementById('rent').addEventListener('click', () => {
+    document.getElementById('propertyType').value = 'Rent';
+});
+
+
 btnGroup.addEventListener("click", (evt) => {
     if(evt.target.tagName.toLowerCase() === 'button') 
     {
