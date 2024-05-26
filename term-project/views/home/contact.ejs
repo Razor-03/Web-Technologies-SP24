@@ -1,0 +1,78 @@
+<%- layout("./layouts/boilerplate") %>
+    <div
+        class="w-screen max-w-full md:py-10 overflow-x-visible bg-[url('https://static.rdc.moveaws.com/images/hero/default/2021-11/jpg/hp-hero-desktop.jpg')] bg-no-repeat bg-cover">
+        <div class="text-white flex flex-col items-center justify-center md:my-12">
+            <div class="w-7/12 mt-20">
+                <h1 class="text-6xl font-bold text-center">
+                    We Are Here For You
+                </h1>
+                <p class="text-center text-2xl">
+                    Contact our team for queries
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto px-4 my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap">
+                        <div
+                            class="hidden md:flex md:w-1/2 flex-col justify-center items-center gap-5 py-5 bg-[#1d2d44] rounded-md">
+                            <h2 class="text-white text-4xl font-semibold">Contact Us</h2>
+                            <p class="text-white text-xl leading-relaxed">Our team is here to answer your queries
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 border p-3 md:p-5 rounded">
+                            <form action="/" id="form">
+                                <div class="text-center text-2xl mb-4 md:hidden">Contact Us</div>
+                                <div class="flex flex-wrap mb-3">
+                                    <div class="w-full md:w-1/2 px-2 mb-3 md:mb-0">
+                                        <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                            name</label>
+                                        <input autocomplete="off" type="text"
+                                            class="string-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                            placeholder="First name" aria-label="First name" id="first-name"
+                                            name="fname">
+                                            <div class="error text-rose-500 text-sm"></div>
+                                    </div>
+                                    <div class="w-full md:w-1/2 px-2">
+                                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last
+                                            Name</label>
+                                        <input autocomplete="off" type="text"
+                                            class="string-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                            placeholder="Last name" aria-label="Last name" id="last-name" name="lname">
+                                            <div class="error text-rose-500 text-sm"></div>
+
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email
+                                        address</label>
+                                    <input autocomplete="off" type="email"
+                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        id="email" aria-describedby="emailHelp" placeholder="example@xyz.com"
+                                        name="email">
+                                        <div class="error text-rose-500 text-sm"></div>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="query" class="block text-sm font-medium text-gray-700">What would you
+                                        like to discuss?</label>
+                                    <input autocomplete="off" type="text"
+                                        class="string-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        id="query" placeholder="Your query here" name="query">
+                                        <div class="error text-rose-500 text-sm"></div>
+
+                                </div>
+                                <div class="flex justify-end">
+                                    <button type="submit" class="bg-[#1d2d44] text-white py-2 px-4 rounded"
+                                        id="submit-button">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

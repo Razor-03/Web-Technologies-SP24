@@ -66,6 +66,10 @@ app.get("/", (req, res) => {
     res.render("home/index");
 });
 
+app.get("/contact", (req, res) => {
+    res.render("home/contact");
+});
+
 app.post("/", (req, res) => {
     const {name, password } = req.body;
     console.log(name);
