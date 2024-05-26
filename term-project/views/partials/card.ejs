@@ -1,15 +1,15 @@
 <div class="flex flex-col gap-14">
     <% properties.map(p=> { %>
-        <div class="flex gap-x-6 max-h-56">
+        <div class="flex gap-x-6 max-h-fit">
             <!-- <p class="text-4xl"></p> -->
-            <div class="basis-2/5 max-h-48">
-                <a href='/properties/<%= p._id %>' class="basis-2/5 h-48">
-                    <img src="<%= p.images[0].url %>" alt="" class="w-full h-full object-cover rounded-md" />
+            <div class="basis-2/5 max-h-72">
+                <a href='/properties/<%= p._id %>' class="w-[500px] h-48">
+                    <img src="<%= p.images[0].url %>" alt="" class="block w-full h-full object-cover rounded-md" />
                 </a>
             </div>
             <div class="basis-3/5 flex flex-col justify-between gap-2">
                 <h2
-                    class="text-lg font-semibold text-[#253344] transition ease-linear duration-100 hover:text-[#0d1b2a] hover:scale-105">
+                    class="text-lg font-semibold text-[#253344] transition ease-linear duration-100 hover:text-[#0d1b2a] hover:translate-y-1">
                     <a href='/properties/<%= p._id %>'>
                         <%= p.title %>
                     </a>
