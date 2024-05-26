@@ -20,6 +20,11 @@ const propertySchema = Schema({
     bathroom: Number,
     price: Number,
     address: String,
+    property: {
+        type: String,
+        enum: ['Apartment', 'House', 'Condo'],
+        required: true
+    },
     location: {
         type: {
             type: String,

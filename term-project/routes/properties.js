@@ -49,7 +49,6 @@ router.get('/', async (req, res) => {
         }
 
         const properties = await Property.find(query);
-        console.log(properties);
 
         res.render('properties/index', { properties });
     } catch (err) {

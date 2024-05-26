@@ -1,234 +1,578 @@
 module.exports.listData = [
     {
-      title: "A Great Apartment Next to the Beach!",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 2,
-      bathroom: 1,
-      price: 1000,
-      address: "456 Park Avenue, London",
-      latitude: 51.5074,
-      longitude: -0.1278,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Spacious Family Home",
+        images: [
+            { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+            { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+            { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A beautiful family home located in a quiet neighborhood.",
+        bedroom: 4,
+        bathroom: 3,
+        property: "Apartment",
+        price: 450000,
+        address: "123 Maple Street",
+        location: {
+            type: "Point",
+            coordinates: [-74.005974, 40.712776]
+        },
+        size: 2400,
+        city: "New York",
+        school: "Lincoln High School",
+        bus: "Bus Line 20",
+        restaurant: "Joe's Diner",
+        type: "Buy",
     },
     {
-      title: "An Awesome Apartment Near the Park! Almost too good to be true!",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 3,
-      bathroom: 2,
-      price: 1500,
-      address: "789 Oxford Street, London",
-      latitude: 52.4862,
-      longitude: -1.8904,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
     },
     {
-      title: "A New Apartment in the City!",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 1,
-      bathroom: 1,
-      price: 800,
-      address: "101 Baker Street, London",
-      latitude: 53.4808,
-      longitude: -2.2426,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Luxury Condo",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A luxury condo with stunning city views.",
+        bedroom: 3,
+        bathroom: 2,
+        property: "Condo",
+        price: 750000,
+        address: "789 Pine Road",
+        location: {
+            type: "Point",
+            coordinates: [-87.629799, 41.878113]
+        },
+        size: 1800,
+        city: "Chicago",
+        school: "Roosevelt Middle School",
+        bus: "Bus Line 50",
+        restaurant: "Elegant Bites",
+        type: "Buy",
     },
     {
-      title: "Great Location! Great Price! Great Apartment!",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 2,
-      bathroom: 1,
-      price: 1000,
-      address: "234 Kingsway, London,",
-      latitude: 53.8008,
-      longitude: -1.5491,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Cozy Cottage",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A cozy cottage perfect for a small family.",
+        bedroom: 3,
+        bathroom: 2,
+        property: "House",
+        price: 320000,
+        address: "321 Birch Lane",
+        location: {
+            type: "Point",
+            coordinates: [-122.419418, 37.774929]
+        },
+        size: 1200,
+        city: "San Francisco",
+        school: "Bayview Elementary School",
+        bus: "Bus Line 15",
+        restaurant: "Seaside Grill",
+        type: "Buy",
     },
     {
-      title: "Apartment 5",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 3,
-      bathroom: 2,
-      price: 1500,
-      address: "567 Victoria Road, London",
-      latitude: 53.4084,
-      longitude: -2.9916,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Chic Loft",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A chic loft in a trendy neighborhood.",
+        bedroom: 1,
+        bathroom: 1,
+        property: "Apartment",
+        price: 1800,
+        address: "654 Cedar Street",
+        location: {
+            type: "Point",
+            coordinates: [-73.935242, 40.730610]
+        },
+        size: 700,
+        city: "Brooklyn",
+        school: "Williamsburg Prep",
+        bus: "Bus Line 21",
+        restaurant: "Urban Cafe",
+        type: "Rent",
     },
     {
-      title: "Apartment 6",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 1,
-      bathroom: 1,
-      price: 800,
-      address: "890 Regent Street, London",
-      latitude: 54.9783,
-      longitude: -1.6174,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
     },
     {
-      title: "Apartment 7",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 2,
-      bathroom: 1,
-      price: 1000,
-      address: "112 Piccadilly, London",
-      latitude: 53.3811,
-      longitude: -1.4701,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
     },
     {
-      title: "Apartment 8",
-      images: [
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240986/EnvisionEstate/cggzyl0wpyubwk5jkefi.jpg',
-        filename: 'EnvisionEstate/cggzyl0wpyubwk5jkefi',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240989/EnvisionEstate/st3wf1ybaf9lrjxqcqpn.jpg',
-        filename: 'EnvisionEstate/st3wf1ybaf9lrjxqcqpn',
-      },
-      {
-        url: 'https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716240988/EnvisionEstate/zfczoizodo9corloh75u.jpg',
-        filename: 'EnvisionEstate/zfczoizodo9corloh75u',
-      }
-    ],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam qui eius tenetur, dolorem similique suscipit laudantium quia ut ex, soluta iusto debitis fugit aut, consectetur distinctio quo animi reprehenderit?",
-      bedroom: 3,
-      bathroom: 2,
-      price: 1500,
-      address: "8765 Main High Street, London",
-      latitude: 51.4545,
-      longitude: -2.5879,
-      size: 861,
-      city: "London",
-      school: "250m away",
-      bus: "100m away",
-      restaurant: "50m away",
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
     },
-  ];
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2700,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2200,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2020,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2300,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2760,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 2980,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 1900,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 1600,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 1500,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 4000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+    {
+        title: "Modern Apartment",
+        images: [
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333250/EnvisionEstate/ftvyoy5av7tismaezvx4.jpg", filename: "ftvyoy5av7tismaezvx4.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333249/EnvisionEstate/qqduphl4wf5s23nz2yew.jpg", filename: "qqduphl4wf5s23nz2yew.jpg" },
+          { url: "https://res.cloudinary.com/dlfo1w8ut/image/upload/v1716333247/EnvisionEstate/mjuinv6itq04cxewhfuk.jpg", filename: "mjuinv6itq04cxewhfuk.jpg" }
+        ],
+        description: "A modern apartment in the heart of the city.",
+        bedroom: 2,
+        bathroom: 1,
+        property: "Apartment",
+        price: 3000,
+        address: "456 Oak Avenue",
+        location: {
+            type: "Point",
+            coordinates: [-118.243683, 34.052235]
+        },
+        size: 850,
+        city: "Los Angeles",
+        school: "Sunset Elementary School",
+        bus: "Bus Line 33",
+        restaurant: "The Gourmet Kitchen",
+        type: "Rent",
+    },
+];
