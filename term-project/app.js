@@ -70,6 +70,15 @@ app.get("/contact", (req, res) => {
     res.render("home/contact");
 });
 
+app.get("/profile", (req, res) => {
+    const user = req.session.user;
+    if (!user) {
+        req.flash("error", "Please login to view profile.");
+        return res.redirect("/login");
+    }
+    res.render("user/profile", { user });
+});
+
 app.post("/", (req, res) => {
     const {name, password } = req.body;
     console.log(name);
