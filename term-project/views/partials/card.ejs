@@ -50,4 +50,22 @@
             </div>
         </div>
         <% }) %>
+            <div class="flex justify-center mt-8">
+                <% if (currentPage> 1) { %>
+                    <a href="?page=<%= currentPage - 1 %>&limit=<%= limit %>"
+                        class="px-3 py-2 mx-1 border rounded">Previous</a>
+                    <% } %>
+
+                        <% for (let i=1; i <=totalPages; i++) { %>
+                            <a href="?page=<%= i %>&limit=<%= limit %>"
+                                class="px-3 py-2 mx-1 border rounded <%= i === currentPage ? 'bg-gray-200' : '' %>">
+                                <%= i %>
+                            </a>
+                            <% } %>
+
+                                <% if (currentPage < totalPages) { %>
+                                    <a href="?page=<%= currentPage + 1 %>&limit=<%= limit %>"
+                                        class="px-3 py-2 mx-1 border rounded">Next</a>
+                                    <% } %>
+            </div>
 </div>

@@ -12,7 +12,7 @@ const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 
 router.get('/', async (req, res) => {
     try {
-        const { location, minPrice, maxPrice, type, property, bedroom, bathroom } = req.query;
+        const { location, minPrice, maxPrice, type, property, bedroom, bathroom, page = 1, limit = 20 } = req.query;
 
         let query = {};
 
@@ -48,9 +48,17 @@ router.get('/', async (req, res) => {
             query.property = property;
         }
 
-        const properties = await Property.find(query);
+        const properties = await Property.find(query)
+        .skip((page - 1) * limit)
+        .limit(parseInt(limit));
+        const totalProperties = await Property.countDocuments(query);
+        const totalPages = Math.ceil(totalProperties / limit);
 
-        res.render('properties/index', { properties });
+        res.render('properties/index', { properties, currentPage: parseInt(page), totalPages, limit: parseInt(limit) });
+
+        // const properties = await Property.find(query);
+
+        // res.render('properties/index', { properties });
     } catch (err) {
         console.error(err);
         res.status(500).send("Server Error");
