@@ -12,7 +12,7 @@ const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 
 router.get('/', async (req, res) => {
     try {
-        const { location, minPrice, maxPrice, type, property, bedroom, bathroom, page = 1, limit = 20 } = req.query;
+        const { location, minPrice, maxPrice, type, property, bedroom, bathroom, page = 1, limit = 12 } = req.query;
 
         let query = {};
 
