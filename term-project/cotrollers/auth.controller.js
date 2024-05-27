@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const User = require('../models/user');
 
+
 const hashPassword = async (password) => {
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
@@ -11,6 +12,8 @@ exports.postRegister = async (req, res) => {
     const { username, email, password } = req.body;
     const hashed = await bcrypt.hash(password, 12);
     const newUser = new User({username, email, password: hashed});
+    const { path, filename} = req.file;
+    newUser.avatar = {url: path, filename };
     await newUser.save();
     req.session.user = newUser;
     res.redirect('/');
