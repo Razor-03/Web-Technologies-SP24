@@ -30,19 +30,34 @@ router.post("/bookmark", async (req, res) => {
     }
 
     try {
+        // Ensure the property exists
         const property = await Property.findById(propertyId);
         if (!property) {
             req.flash("error", "Property not found.");
             return res.redirect("back");
         }
 
-        const updatedUser = await User.findByIdAndUpdate(
-            user._id,
-            { $addToSet: { saved: propertyId } },
-            { new: true }
-        );
+        // Check if the property is already saved
+        const userRecord = await User.findById(user._id);
+        const isSaved = userRecord.saved.includes(propertyId);
 
-        req.flash("success", "Property bookmarked successfully.");
+        if (isSaved) {
+            // If the property is already saved, remove it from the saved list
+            await User.findByIdAndUpdate(
+                user._id,
+                { $pull: { saved: propertyId } }
+            );
+            req.flash("success", "Property removed from bookmarks.");
+        } else {
+            // If the property is not saved, add it to the saved list
+            await User.findByIdAndUpdate(
+                user._id,
+                { $addToSet: { saved: propertyId } },
+                { new: true }
+            );
+            req.flash("success", "Property bookmarked successfully.");
+        }
+
         res.redirect(`/properties/${propertyId}`);
     } catch (err) {
         console.error(err);

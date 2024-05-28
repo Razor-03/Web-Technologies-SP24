@@ -40,7 +40,16 @@
                     </div>
                     <div class="flex gap-4 self-end">
                         <div class="border p-2 rounded-md hover:bg-[#ddd]">
-                            <i class="fa-regular fa-bookmark"></i>
+                            <form action="/user/bookmark" method="post">
+                                <input type="hidden" name="propertyId" value="<%= p._id %>">
+                                <button class="text-sm">
+                                    <% if (p.author.saved.includes(p._id)) {%>
+                                        <i class="fa-regular fa-bookmark"></i>
+                                        <% } else { %>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                            <% } %>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

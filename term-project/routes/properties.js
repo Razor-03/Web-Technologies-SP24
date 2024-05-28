@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
 
         const properties = await Property.find(query)
         .skip((page - 1) * limit)
-        .limit(parseInt(limit));
+        .limit(parseInt(limit)).populate("author");
         const totalProperties = await Property.countDocuments(query);
         const totalPages = Math.ceil(totalProperties / limit);
 
