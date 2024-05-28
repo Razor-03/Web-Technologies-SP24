@@ -4,6 +4,8 @@ const Property = require("../models/property");
 const User = require("../models/user");
 const { requireLogin, isAuthor } = require("../middleware");
 const { cloudinary } = require("../cloudinary");
+const sendEmail = require ('../utils/sendEmail');
+
 
 router.get("/profile", async (req, res) => {
     try {
@@ -30,26 +32,22 @@ router.post("/bookmark", async (req, res) => {
     }
 
     try {
-        // Ensure the property exists
         const property = await Property.findById(propertyId);
         if (!property) {
             req.flash("error", "Property not found.");
             return res.redirect("back");
         }
 
-        // Check if the property is already saved
         const userRecord = await User.findById(user._id);
         const isSaved = userRecord.saved.includes(propertyId);
 
         if (isSaved) {
-            // If the property is already saved, remove it from the saved list
             await User.findByIdAndUpdate(
                 user._id,
                 { $pull: { saved: propertyId } }
             );
             req.flash("success", "Property removed from bookmarks.");
         } else {
-            // If the property is not saved, add it to the saved list
             await User.findByIdAndUpdate(
                 user._id,
                 { $addToSet: { saved: propertyId } },
@@ -65,5 +63,24 @@ router.post("/bookmark", async (req, res) => {
         res.redirect("back");
     }
 });
+
+router.post("/send-email", async (req, res) => {
+    const { email, name, message, to } = req.body;
+    try {
+        await sendEmail({
+            //the client email 
+            to,
+            //sendGrid sender id 
+            from: 'nikobellyx@gmail.com',
+            subject: 'Potential Customer for your property',
+            text: 'Hello, I am interested in your property. Please contact me for further details.',
+            html:`User <strong>${name}</strong> sent you this message: <br> ${message} <br> You can contact them at: ${email}`
+        });
+        res.redirect('/properties');
+    } catch (e) {
+        console.log(e);
+        res.sendStatus(500);
+    }
+})
 
 module.exports = router;

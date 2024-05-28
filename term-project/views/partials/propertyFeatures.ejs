@@ -83,7 +83,7 @@
         <div id='map' class="h-full"></div>
     </div>
     <div class="buttons flex justify-between text-sm sm:text-base">
-        <button class="flex items-center p-4 bg-white rounded-md gap-2">
+        <button id="messageButton" class="flex items-center p-4 bg-white rounded-md gap-2">
             <i class="fa-regular fa-comment"></i>
             Send a Message
         </button>
@@ -99,7 +99,46 @@
             </button>
         </form>
     </div>
+    <div id="messageFormContainer" class="hidden mt-6 bg-[#fff] p-4 rounded-md">
+        <form action="/user/send-email" method="post">
+            <input type="hidden" name="to" value="<%= property.author.email %>">
+            <div>
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                <div class="mt-2">
+                    <input id="email" name="email" type="text" autocomplete="off" required
+                        class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+            <div>
+                <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                <div class="mt-2">
+                    <input id="name" name="name" type="text" autocomplete="off" required
+                        class="px-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+            <input type="hidden" class="hidden" name="propertyId" value="<%= property._id %>">
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+            </div>
+            <button type="submit" class="flex items-center p-4 bg-[#1d2d44] text-white rounded-md gap-2">
+                <i class="fa-regular fa-paper-plane"></i>
+                Send
+            </button>
+        </form>
+    </div>
 </div>
+<script>
+    document.getElementById('messageButton').addEventListener('click', function () {
+        var formContainer = document.getElementById('messageFormContainer');
+        if (formContainer.classList.contains('hidden')) {
+            formContainer.classList.remove('hidden');
+        } else {
+            formContainer.classList.add('hidden');
+        }
+    });
+</script>
 <script>
     const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
     const property = <%- JSON.stringify(property) %>;
