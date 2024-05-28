@@ -24,6 +24,7 @@ db.once("open", () => {
 
 const propertyRoutes = require("./routes/properties");
 const authRoutes = require("./routes/auth");
+const apiAuthRoutes = require("./routes/api/user");
 const userRoutes = require("./routes/users");
 const propertyApiRoutes = require("./routes/api/properties");
 
@@ -63,6 +64,7 @@ app.use("/properties", propertyRoutes);
 app.use("/user", userRoutes);
 app.use("/api/properties", propertyApiRoutes);
 app.use("/", authRoutes);
+app.use("/api", apiAuthRoutes);
 
 app.get("/", (req, res) => {
     res.render("home/index");
