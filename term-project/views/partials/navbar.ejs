@@ -12,6 +12,9 @@
         <a href="/properties" class="hidden md:inline">Browse</a>
         <!-- <a href="" class="hidden md:inline">About</a> -->
         <a href="/contact" class="hidden md:inline">Contact Us</a>
+        <% if (user) {%>
+            <a href="/properties/new" class="hidden md:inline">Add Property</a>
+            <% } %>
     </div>
     <div class="basis-2/5 flex justify-end items-center gap-x-2 sm:gap-x-10 h-full md:pe-4">
         <% if (user) {%>

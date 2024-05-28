@@ -82,6 +82,7 @@ router.get('/:id/edit', requireLogin, isAuthor, async (req, res) => {
 });
 
 router.post('/', requireLogin, upload.array("image"), async (req, res) => {
+    // console.log(req.body);
     const geoData = await geocoder.forwardGeocode({
         query: req.body.property.city,
         limit: 1
@@ -91,7 +92,7 @@ router.post('/', requireLogin, upload.array("image"), async (req, res) => {
     property.author = req.session.user._id;
     property.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     await property.save();
-    console.log(property);
+    // console.log(property);
     res.redirect(`/properties/${property._id}`);
     // console.log(req.body.property);
     // console.log(req.body, req.files);

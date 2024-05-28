@@ -1,87 +1,62 @@
 <%- layout("layouts/boilerplate") %>
-    <!-- <main class="flex flex-col md:flex-row h-screen">
-    <div class="lg:basis-3/5 my-20 lg:m-0 h-full">
-        <div class="lg:pr-24 flex flex-col justify-center gap-y-12 h-full">
-            <h1 class="text-5xl md:text-6xl font-semibold">Discover Your Dream Home</h1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At sapiente tempora
-                modi dolore nisi laudantium cupiditate non deserunt quis consequatur!
-                Dolore consectetur cumque fugiat soluta sunt fuga nulla dicta eaque.
-            </p>
-            <%- include("../partials/searchbar") %>
-            <div class="hidden md:flex justify-between">
-                <div class="">
-                    <h1 class="text-3xl font-semibold">16+</h1>
-                    <h2 class="text-xl font-light">Years of Experience</h2>
-                </div>
-                <div class="">
-                    <h1 class="text-3xl font-semibold">16+</h1>
-                    <h2 class="text-xl font-light">Awards Gained</h2>
-                </div>
-                <div class="">
-                    <h1 class="text-3xl font-semibold">16+</h1>
-                    <h2 class="text-xl font-light">Awards Gained</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="basis-2/5 items-center bg-[#f0ebd8] relative hidden lg:flex">
-        <img class="rounded-md absolute right-0" src="/images/houses.jpg" alt="" />
-    </div>
-</main> -->
 
-<div class="w-screen max-w-full md:py-10 overflow-x-visible bg-[url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover">
-    <div class="text-white flex flex-col items-center justify-center md:my-12">
-        <div class="w-7/12 mt-20">
-            <h1 class="text-6xl font-bold text-center">
-                Discover Your New Home
-            </h1>
-            <p class="text-center text-2xl">
-                Helping people find their new home
-            </p>
-            <%- include("../partials/searchbar") %>
+    <div
+        class="w-screen max-w-full md:py-10 overflow-x-visible bg-[url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover">
+        <div class="text-white flex flex-col items-center justify-center md:my-12">
+            <div class="w-7/12 mt-20">
+                <h1 class="text-6xl font-bold text-center">
+                    Discover Your New Home
+                </h1>
+                <p class="text-center text-2xl">
+                    Helping people find their new home
+                </p>
+                <%- include("../partials/searchbar") %>
+            </div>
+            <div class="w-6/12 hidden"></div>
         </div>
-        <div class="w-6/12 hidden"></div>
     </div>
-</div>
 
     </header>
     <main class="container mx-auto">
         <div class="my-20">
             <h2 class="text-center text-3xl">What are you looking for</h2>
         </div>
-            <div class="flex flex-wrap justify-evenly gap-4 my-20">
-                <div
-                    class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 border border-gray-300 m-4 max-w-96 h-fit">
-                    <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/07/Buy_a_home.webp"
-                        class="w-full" alt="browse homes" />
-                    <div class="p-4 text-center">
-                        <h5 class="text-xl font-semibold">Browse homes</h5>
-                        <p class="text-gray-600">
-                            Find your place with an immersive photo experience and the most
-                            listings, including things you won’t find anywhere else.
-                        </p>
-                        <button class="border border-blue-500 text-blue-500 py-2 px-4 rounded my-4" type="button">
+        <div class="flex flex-wrap justify-evenly gap-4 my-20">
+            <div
+                class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 border border-gray-300 m-4 max-w-96 h-fit">
+                <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/07/Buy_a_home.webp"
+                    class="w-full" alt="browse homes" />
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold">Browse homes</h5>
+                    <p class="text-gray-600 mb-8">
+                        Find your place with an immersive photo experience and the most
+                        listings, including things you won’t find anywhere else.
+                    </p>
+                    <div class="my-4">
+                        <a class="border border-blue-500 text-blue-500 py-2 px-4 rounded " href="/properties?type=Buy">
                             Browse homes
-                        </button>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div
-                    class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 border border-gray-300 m-4 max-w-96 h-fit">
-                    <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/Rent_a_home.webp"
-                        class="w-full" alt="rent homes" />
-                    <div class="p-4 text-center">
-                        <h5 class="text-xl font-semibold">Rent a home</h5>
-                        <p class="text-gray-600">
-                            We’re creating a seamless online experience – from shopping on
-                            the largest rental network, to applying, to paying rent.
-                        </p>
-                        <button class="border border-blue-500 text-blue-500 py-2 px-4 rounded my-4" type="button">
+            <div
+                class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 border border-gray-300 m-4 max-w-96 h-fit">
+                <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/Rent_a_home.webp"
+                    class="w-full" alt="rent homes" />
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold">Rent a home</h5>
+                    <p class="text-gray-600 mb-8">
+                        We’re creating a seamless online experience – from shopping on
+                        the largest rental network, to applying, to paying rent.
+                    </p>
+                    <div class="my-4">
+                        <a class="border border-blue-500 text-blue-500 py-2 px-4 rounded" href="/properties?type=Rent">
                             Find rentals
-                        </button>
+                        </a>
                     </div>
                 </div>
+            </div>
 
         </div>
 
@@ -92,15 +67,17 @@
         <section class="container-fluid px-0 mx-0 py-3">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="w-full lg:w-6/12 order-1 lg:order-1">
-                    <img class="w-full" src="https://www.travelandleisure.com/thmb/fiQh3JSnXRX98BkmWgivJdJ0NgQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/madison-wisconsin_HERO_COLLEGETOWN0822-776bea04bd764dd6820aaa65b7524800.jpg" alt="town" />
+                    <img class="w-full"
+                        src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="town" />
                 </div>
                 <div class="w-full lg:w-6/12 order-2 lg:order-2 mb-5 lg:mb-0">
                     <div class="flex justify-center my-10">
                         <div class="w-10/12 text-center">
                             <h2 class="text-2xl font-semibold">Developed Infrastructure</h2>
                             <p class="text-lg">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                                libero pariatur laudantium, beatae ab tenetur totam possimus
+                                Browse the highest quality listings, apply online, sign your lease, and even pay your
+                                rent from any device.
                                 delectus quod nihil doloremque atque doloribus laboriosam?
                                 Odio possimus maiores ea delectus harum.
                             </p>
@@ -119,10 +96,8 @@
                         <div class="w-10/12 text-center">
                             <h2 class="text-2xl font-semibold text-red-600">Public Areas</h2>
                             <p class="text-lg">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                                necessitatibus, reprehenderit minima dignissimos assumenda
-                                deleniti odit! Quia tempora sed exercitationem? Rem,
-                                excepturi. Nihil placeat nisi, ipsam quae numquam ex eaque?
+                                Connect with more than 75 million renters looking for new homes using our comprehensive
+                                marketing platform. Nihil placeat nisi, ipsam quae numquam ex eaque?
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                 Reiciendis explicabo autem repudiandae temporibus tempore quia
                                 enim non, alias eius voluptate sint suscipit cumque, labore
