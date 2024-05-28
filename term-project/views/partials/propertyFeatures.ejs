@@ -5,14 +5,18 @@
             <i class="fa-thin fa-person"></i>
             <div class="featureText text-sm">
                 <span class="font-semibold">Posted By</span>
-                <p><%= property.author.username %></p>
+                <p>
+                    <%= property.author.username %>
+                </p>
             </div>
         </div>
         <div class="feature flex items-center gap-2">
             <i class="fa-regular fa-envelope"></i>
             <div class="featureTex text-sm">
                 <span class="font-semibold">Contact</span>
-                <p><%= property.author.email %></p>
+                <p>
+                    <%= property.author.email %>
+                </p>
             </div>
         </div>
         <div class="feature flex items-center gap-2">
@@ -27,15 +31,21 @@
     <div class="sizes flex justify-between gap-2">
         <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
             <i class="fa-solid fa-ruler"></i>
-            <span><%= property.size %> sq ft</span>
+            <span>
+                <%= property.size %> sq ft
+            </span>
         </div>
         <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
             <i class="fa-solid fa-bed"></i>
-            <span><%= property.bedroom %> bedroom</span>
+            <span>
+                <%= property.bedroom %> bedroom
+            </span>
         </div>
         <div class="size flex items-center bg-[#fff] py-2 px-1 rounded-md gap-2 text-xs sm:text-sm sm:p-3">
             <i class="fa-solid fa-bath"></i>
-            <span><%= property.bathroom %> bathrooom</span>
+            <span>
+                <%= property.bathroom %> bathrooom
+            </span>
         </div>
     </div>
     <p class="font-semibold text-lg">Nearby Places</p>
@@ -44,21 +54,27 @@
             <i class="fa-solid fa-school"></i>
             <div class="featureText text-xs sm:text-sm">
                 <span class="font-semibold">School</span>
-                <p><%= property.school %></p>
+                <p>
+                    <%= property.school %>
+                </p>
             </div>
         </div>
         <div class="feature flex items-center gap-2">
             <i class="fa-solid fa-bus"></i>
             <div class="featureTex text-xs sm:text-sm">
                 <span class="font-semibold">Bus Stop</span>
-                <p><%= property.bus %></p>
+                <p>
+                    <%= property.bus %>
+                </p>
             </div>
         </div>
         <div class="feature flex items-center gap-2">
             <i class="fa-solid fa-utensils"></i>
             <div class="featureText text-xs sm:text-sm">
                 <span class="font-semibold">Restaurant</span>
-                <p><%= property.restaurant %></p>
+                <p>
+                    <%= property.restaurant %>
+                </p>
             </div>
         </div>
     </div>
@@ -71,10 +87,13 @@
             <i class="fa-regular fa-comment"></i>
             Send a Message
         </button>
-        <button class="flex items-center p-4 bg-white rounded-md gap-2">
-            <i class="fa-regular fa-bookmark"></i>
-            Save
-        </button>
+        <form action="/user/bookmark" method="post">
+            <input type="hidden" name="propertyId" value="<%= property._id %>">
+            <button class="flex items-center p-4 bg-white rounded-md gap-2">
+                <i class="fa-regular fa-bookmark"></i>
+                Save
+            </button>
+        </form>
     </div>
 </div>
 <script>

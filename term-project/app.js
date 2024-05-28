@@ -24,6 +24,7 @@ db.once("open", () => {
 
 const propertyRoutes = require("./routes/properties");
 const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/users");
 const propertyApiRoutes = require("./routes/api/properties");
 
 app.engine('ejs', ejsMate);
@@ -59,6 +60,7 @@ app.use((req, res, next) => {
 
 
 app.use("/properties", propertyRoutes);
+app.use("/user", userRoutes);
 app.use("/api/properties", propertyApiRoutes);
 app.use("/", authRoutes);
 
@@ -68,15 +70,6 @@ app.get("/", (req, res) => {
 
 app.get("/contact", (req, res) => {
     res.render("home/contact");
-});
-
-app.get("/profile", (req, res) => {
-    const user = req.session.user;
-    if (!user) {
-        req.flash("error", "Please login to view profile.");
-        return res.redirect("/login");
-    }
-    res.render("user/profile", { user });
 });
 
 app.post("/", (req, res) => {

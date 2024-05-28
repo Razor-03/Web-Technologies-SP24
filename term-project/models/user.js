@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Property = require('./property');
 const Schema = mongoose.Schema;
 
 const userSchema = Schema({
@@ -7,6 +8,12 @@ const userSchema = Schema({
         url: String,
         filename: String
     },
+    saved: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Property"
+        }
+    ],
     email: String,
     password: String
 });
