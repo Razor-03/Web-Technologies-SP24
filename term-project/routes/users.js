@@ -5,13 +5,19 @@ const User = require("../models/user");
 const { requireLogin, isAuthor } = require("../middleware");
 const { cloudinary } = require("../cloudinary");
 
-router.get("/profile", (req, res) => {
-    const user = req.session.user;
-    if (!user) {
-        req.flash("error", "Please login to view profile.");
-        return res.redirect("/login");
+router.get("/profile", async (req, res) => {
+    try {
+        const id = req.session.user._id;
+        const user = await User.findById(id).populate("saved");
+        if (!id) {
+            req.flash("error", "Please login to view profile.");
+            return res.redirect("/login");
+        }
+        res.render("user/profile", { user });
+    } catch(err) {
+        console.error(err);
+        res.status(500).send("Server Error");
     }
-    res.render("user/profile", { user });
 });
 
 router.post("/bookmark", async (req, res) => {
