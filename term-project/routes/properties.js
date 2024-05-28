@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
         const totalProperties = await Property.countDocuments(query);
         const totalPages = Math.ceil(totalProperties / limit);
 
-        res.render('properties/index', { properties, currentPage: parseInt(page), totalPages, limit: parseInt(limit) });
+        res.render('properties/index', { properties, currentPage: parseInt(page), totalPages, limit: parseInt(limit), location });
 
         // const properties = await Property.find(query);
 
