@@ -1,0 +1,28 @@
+<div class="my-20 text-black">
+    <div id="btnGroup" class="flex gap-0">
+        <button id="buy"
+            class="px-7 py-3 border border-[#a5abb4] md:border-b-0 bg-white capitalize text-[#1d2d44] rounded-tl-md border-r"
+            onClick="">
+            Buy
+        </button>
+        <button id="rent"
+            class="px-7 py-3 border border-[#a5abb4] md:border-b-0 bg-white capitalize text-[#1d2d44] rounded-tr-md border-l-0"
+            onClick="">
+            Rent
+        </button>
+    </div>
+    <form action="/properties/"
+        class="flex flex-col gap-y-2 mt-2 md:mt-0 md:flex-row justify-between md:border md:border-[#a5abb4] md:h-16 rounded-sm">
+        <input type="text" name="location" placeholder="Where"
+            class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:flex-auto md:w-40 md:px-2" />
+        <input type="number" name="minPrice" placeholder="Min Price" min=0 max=1000000000
+            class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:w-20 md:flex-auto md:px-2" />
+        <input type="number" name="maxPrice" placeholder="Max Price" min=0 max=1000000000
+            class="p-2 border border-x-0 border-t-0 border-b-[#a5abb4] md:border-0 md:w-20 md:flex-auto md:px-2" />
+        <input type="hidden" name="type" id="propertyType" />
+        <button
+            class="flex justify-center items-center px-4 text-3xl p-2 text-[#f0ebd8] bg-[#1d2d44] flex-1 md:max-w-20">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+</div>

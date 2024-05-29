@@ -1,0 +1,58 @@
+<nav
+    class="max-w-[100%] md:max-w-[90%] xl:max-w-[90%] mx-auto px-[20px] text-base sm:text-base h-20 flex justify-between items-center">
+    <div class="basis-3/5 flex gap-x-4 xl:gap-x-10 justify-between md:justify-start items-center h-full">
+        <div id="menuBtn" class="z-20 transition-all ease-linear duration-300 lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <a href="/" class="flex items-center">
+            <img src="/images/eLogo.png" alt="E" class="inline w-14" />
+            <span class="font-bold text-lg inline md:hidden lg:inline">EnvisionEstate</span>
+        </a>
+        <a href="/" class="hidden md:inline">Home</a>
+        <a href="/properties" class="hidden md:inline">Browse</a>
+        <!-- <a href="" class="hidden md:inline">About</a> -->
+        <a href="/contact" class="hidden md:inline">Contact Us</a>
+        <% if (user) {%>
+            <a href="/properties/new" class="hidden md:inline">Add Property</a>
+            <% } %>
+    </div>
+    <div class="basis-2/5 flex justify-end items-center gap-x-2 sm:gap-x-10 h-full md:pe-4">
+        <% if (user) {%>
+            <div class="user flex gap-x-4 items-center font-semibold">
+                <!-- <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="profile-pic" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" /> -->
+                <span class="hidden md:inline">
+                    <%= user.username %>
+                </span>
+            </div>
+            <a href="/user/profile"
+                class="py-2 px-4 cursor-pointer bg-[#1d2d44] text-[#f0ebd8] me-3 relative rounded-md hidden md:inline">
+                Profile
+            </a>
+            <form action="/logout" method="post">
+                <button
+                    class="py-2 px-4 cursor-pointer bg-[#1d2d44] text-[#f0ebd8] me-3 relative rounded-md hidden md:inline">Logout</button>
+            </form>
+            <% } else { %>
+                <a href="/login" class="hidden md:inline">Log In</a>
+                <a href="/register" class="bg-[#1d2d44] text-[#f0ebd8] py-1 px-3 rounded-md">Sign Up</a>
+                <% } %>
+
+                    <div id="sidebar"
+                        class='bg-[#0d1321] text-[#f0ebd8] absolute top-0 h-screen w-[50%] flex flex-col items-center justify-center gap-y-12 transition-all ease-linear duration-300 left-[-50%] z-10'>
+                        <a href="" class="">Home</a>
+                        <a href="/properties" class="">Browse</a>
+                        <!-- <a href="" class="">About</a> -->
+                        <a href="/contact" class="">Contact Us</a>
+                        <% if (user) {%>
+                            <a href="/login" class="">Login</a>
+                            <a href="/register" class="">Sign Up</a>
+                            <% } else { %>
+                                <a href="/user" class="">Profile</a>
+                                <form action="/logout" method="post">
+                                    <button class="">Logout</button>
+                                </form>
+                                <% } %>
+                    </div>
+    </div>
+</nav>
