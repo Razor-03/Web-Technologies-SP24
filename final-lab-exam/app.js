@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require("express");
 const app = express();
+const Property = require("./models/property");
 const path = require("path");
 const ejsMate = require('ejs-mate');
 const mongoose = require("mongoose");
@@ -66,8 +67,15 @@ app.use("/api/properties", propertyApiRoutes);
 app.use("/", authRoutes);
 app.use("/api", apiAuthRoutes);
 
-app.get("/", (req, res) => {
-    res.render("home/index");
+app.get("/", async (req, res) => {
+    try {
+        const featuredProperties = await Property.find({ isFeatured: true }).limit(5);
+
+        res.render("home/index", { featuredProperties });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server Error");
+    }
 });
 
 app.get("/contact", (req, res) => {
