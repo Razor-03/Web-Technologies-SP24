@@ -41,6 +41,7 @@ const propertySchema = Schema({
     school: String,
     bus: String,
     restaurant: String,
+    
     isFeatured: {
         type: Boolean,
         default: false
