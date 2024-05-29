@@ -1,0 +1,21 @@
+<%- layout("layouts/boilerplate") %>
+<div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Recently Visited Properties</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <% if (visitedProperties.length > 0) { %>
+            <% visitedProperties.forEach(property => { %>
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="<%= property.images[0].url %>" alt="<%= property.title %>" class="w-full h-40 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold mb-2"><%= property.title %></h2>
+                        <p class="text-gray-600 mb-4"><%= property.description %></p>
+                        <p class="text-gray-800 font-semibold">$<%= property.price %></p>
+                        <!-- Add more property details as needed -->
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="text-gray-600">No properties visited recently.</p>
+        <% } %>
+    </div>
+</div>

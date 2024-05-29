@@ -82,6 +82,22 @@ app.get("/contact", (req, res) => {
     res.render("home/contact");
 });
 
+app.get('/visited-products', async (req, res) => {
+    try {
+        let visitedProperties = [];
+        if (req.session.visitedProducts) {
+            visitedProperties = await Property.find({
+                _id: { $in: req.session.visitedProducts }
+            });
+        }
+
+        res.render('visitedProperties', { visitedProperties });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server Error");
+    }
+});
+
 app.post("/", (req, res) => {
     const {name, password } = req.body;
     console.log(name);
