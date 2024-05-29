@@ -1,0 +1,18 @@
+.error-border {
+    border-width: 1px;
+    border-color: #f43f5e;
+}
+
+.success-border {
+    border-width: 1px;
+    border-color: green;
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    max-height: calc(1.2em * 5); /* Adjust based on your actual line-height */
+    line-height: 1.2em; /* Adjust based on your actual line-height */
+}
