@@ -11,11 +11,12 @@ router.get("/profile", async (req, res) => {
     try {
         const id = req.session.user._id;
         const user = await User.findById(id).populate("saved");
-        if (!id) {
+        const properties = await Property.find({ author: id });
+        if (!id || !user) {
             req.flash("error", "Please login to view profile.");
             return res.redirect("/login");
         }
-        res.render("user/profile", { user });
+        res.render("user/profile", { user, properties });
     } catch(err) {
         console.error(err);
         res.status(500).send("Server Error");
